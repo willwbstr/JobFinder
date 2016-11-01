@@ -77,6 +77,9 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReturn2Main = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             businessIDLabel = new System.Windows.Forms.Label();
             businessNameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
@@ -93,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // businessIDLabel
@@ -433,6 +437,7 @@
             this.txtAddress.ReadOnly = true;
             this.txtAddress.Size = new System.Drawing.Size(272, 22);
             this.txtAddress.TabIndex = 9;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // txtAddress2
             // 
@@ -500,6 +505,31 @@
             this.btnReturn2Main.UseVisualStyleBackColor = true;
             this.btnReturn2Main.Click += new System.EventHandler(this.btnReturn2Main_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(853, 28);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printFileToolStripMenuItem});
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.printToolStripMenuItem.Text = "Print";
+            // 
+            // printFileToolStripMenuItem
+            // 
+            this.printFileToolStripMenuItem.Name = "printFileToolStripMenuItem";
+            this.printFileToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
+            this.printFileToolStripMenuItem.Text = "Print File";
+            // 
             // Results_Modify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,6 +558,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(businessIDLabel);
             this.Controls.Add(this.txtBusinessID);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Results_Modify";
             this.Text = "Results_Modify";
             this.Load += new System.EventHandler(this.Results_Modify_Load);
@@ -540,6 +572,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,5 +622,8 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReturn2Main;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printFileToolStripMenuItem;
     }
 }

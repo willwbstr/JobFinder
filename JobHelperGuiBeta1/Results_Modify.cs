@@ -90,6 +90,11 @@ namespace JobHelperGuiBeta1
           
         }
 
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     
     }
 }
