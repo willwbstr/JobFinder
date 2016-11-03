@@ -35,11 +35,6 @@ namespace JobHelperGuiBeta1
             add1.Show();
         }
 
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Moving this to Results_modify form
-        }
-
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Closes program
@@ -59,6 +54,11 @@ namespace JobHelperGuiBeta1
             this.Hide();
             Search search1 = new Search();
             search1.Show();
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
     
