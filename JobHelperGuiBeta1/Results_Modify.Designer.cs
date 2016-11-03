@@ -78,8 +78,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReturn2Main = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showReportFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             businessIDLabel = new System.Windows.Forms.Label();
             businessNameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
@@ -509,26 +509,26 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.printToolStripMenuItem});
+            this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(853, 28);
             this.menuStrip1.TabIndex = 22;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // printToolStripMenuItem
+            // reportsToolStripMenuItem
             // 
-            this.printToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.printFileToolStripMenuItem});
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
-            this.printToolStripMenuItem.Text = "Print";
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showReportFileToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.reportsToolStripMenuItem.Text = "Reports";
             // 
-            // printFileToolStripMenuItem
+            // showReportFileToolStripMenuItem
             // 
-            this.printFileToolStripMenuItem.Name = "printFileToolStripMenuItem";
-            this.printFileToolStripMenuItem.Size = new System.Drawing.Size(141, 26);
-            this.printFileToolStripMenuItem.Text = "Print File";
+            this.showReportFileToolStripMenuItem.Name = "showReportFileToolStripMenuItem";
+            this.showReportFileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.showReportFileToolStripMenuItem.Text = "Show Report";
             // 
             // Results_Modify
             // 
@@ -624,7 +624,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReturn2Main;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showReportFileToolStripMenuItem;
     }
 }

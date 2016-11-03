@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MainGui;
+
 
 namespace JobHelperGuiBeta1
 {
@@ -26,11 +26,11 @@ namespace JobHelperGuiBeta1
         private void btnSearch_Click(object sender, EventArgs e)
         {
             // Search by already presented field and Display Results_Modify Form
-           List<Field> searchToolStripMenuItem.MainGui =
-               searchToolStripMenuItem.MainGui.FindAll(FieldAccessException => Field.Filter == selectedField.Filter);
-            Results_Modify R_M = new Results_Modify();
-            R_M.Show();
-            this.Close();
+           //List<Field> searchToolStripMenuItem.MainGui =
+           //    searchToolStripMenuItem.MainGui.FindAll(FieldAccessException => Field.Filter == selectedField.Filter);
+           // Results_Modify R_M = new Results_Modify();
+           // R_M.Show();
+           // this.Close();
 
 
         }

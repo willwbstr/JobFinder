@@ -36,7 +36,8 @@ namespace JobHelperGuiBeta1
             this.contactTableAdapter.Fill(this.jobFinderDataSet.Contact);
             // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
             this.businessTableAdapter.Fill(this.jobFinderDataSet.Business);
-          
+
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnModify_Click(object sender, EventArgs e)
@@ -91,6 +92,11 @@ namespace JobHelperGuiBeta1
         }
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
