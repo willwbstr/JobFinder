@@ -102,6 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(287, 198);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelP);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

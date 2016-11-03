@@ -31,6 +31,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.txtDisplayFormat = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -39,16 +40,15 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(220, 22);
             this.txtSearch.TabIndex = 0;
-         
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 17);
+            this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Criteria";
+            this.label1.Text = "C W M I ";
             // 
             // btnSearch
             // 
@@ -60,15 +60,28 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // txtDisplayFormat
+            // 
+            this.txtDisplayFormat.Location = new System.Drawing.Point(104, 13);
+            this.txtDisplayFormat.Name = "txtDisplayFormat";
+            this.txtDisplayFormat.Size = new System.Drawing.Size(183, 22);
+            this.txtDisplayFormat.TabIndex = 3;
+            this.txtDisplayFormat.Text = "Display Format Desired";
+            this.txtDisplayFormat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(328, 130);
+            this.ControlBox = false;
+            this.Controls.Add(this.txtDisplayFormat);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Search";
             this.Text = "Search";
             this.Load += new System.EventHandler(this.Search_Load);
@@ -82,5 +95,6 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtDisplayFormat;
     }
 }

@@ -111,44 +111,38 @@
             // buisnessToolStripMenuItem
             // 
             this.buisnessToolStripMenuItem.Name = "buisnessToolStripMenuItem";
-            this.buisnessToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.buisnessToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.buisnessToolStripMenuItem.Text = "Business";
-          
             // 
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.contactToolStripMenuItem.Text = "Contact";
-       
             // 
             // dateToolStripMenuItem
             // 
             this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.dateToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.dateToolStripMenuItem.Text = "Date";
-         
             // 
             // phoneToolStripMenuItem
             // 
             this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
-            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.phoneToolStripMenuItem.Text = "Phone";
-         
             // 
             // eMailToolStripMenuItem
             // 
             this.eMailToolStripMenuItem.Name = "eMailToolStripMenuItem";
-            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.eMailToolStripMenuItem.Text = "E-Mail";
-          
             // 
             // jobToolStripMenuItem
             // 
             this.jobToolStripMenuItem.Name = "jobToolStripMenuItem";
-            this.jobToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.jobToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.jobToolStripMenuItem.Text = "Job";
-           
             // 
             // EventsToolStripMenuItem
             // 
@@ -163,7 +157,6 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.openToolStripMenuItem.Text = "Open";
-            
             // 
             // webBrowser1
             // 
@@ -181,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(767, 396);
+            this.ControlBox = false;
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

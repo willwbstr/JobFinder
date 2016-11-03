@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace JobHelperGuiBeta1
 {
-    public partial class AddNew1 : Form
+    public partial class AddBusinessContactInfo : Form
     {
-        public AddNew1()
+        public AddBusinessContactInfo()
         {
+            
             InitializeComponent();
         }
 
@@ -25,29 +26,37 @@ namespace JobHelperGuiBeta1
 
         }
 
-        private void AddNew1_Load(object sender, EventArgs e)
+        private void AddNew2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
             this.businessTableAdapter.Fill(this.jobFinderDataSet.Business);
-
+            
         }
 
-        private void btnNext1_Click(object sender, EventArgs e)
+        private void btnPrevious2_Click(object sender, EventArgs e)
+        {
+            // Hides this form and loads the previous 
+            this.Hide();
+            AddBusiness add1 = new AddBusiness();
+            add1.ShowDialog();
+            this.Show();
+        }
+
+        private void btnNext2_Click(object sender, EventArgs e)
         {
             // Hides this form and loads the next form
             this.Hide();
-            AddNew2 add2 = new AddNew2();
-            add2.Show();
+            AddContact add3 = new AddContact();
+            add3.Show();
         }
 
-        private void btnCancel1_Click(object sender, EventArgs e)
+        private void btnCancel2_Click(object sender, EventArgs e)
         {
             // Clears the form
             ClearAllText(this);
         }
 
-
-        // The Method that clears the text Boxes
+           // The Method that clears the text Boxes
         private void ClearAllText(Control con)
         {
             foreach (Control c in con.Controls)
@@ -56,7 +65,6 @@ namespace JobHelperGuiBeta1
                     ((TextBox)c).Clear();
                 else
                     ClearAllText(c);
-
             }
         }
     }

@@ -10,11 +10,10 @@ using System.Windows.Forms;
 
 namespace JobHelperGuiBeta1
 {
-    public partial class AddNew2 : Form
+    public partial class AddBusiness : Form
     {
-        public AddNew2()
+        public AddBusiness()
         {
-            
             InitializeComponent();
         }
 
@@ -26,37 +25,29 @@ namespace JobHelperGuiBeta1
 
         }
 
-        private void AddNew2_Load(object sender, EventArgs e)
+        private void AddNew1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
             this.businessTableAdapter.Fill(this.jobFinderDataSet.Business);
-            
+
         }
 
-        private void btnPrevious2_Click(object sender, EventArgs e)
-        {
-            // Hides this form and loads the previous 
-            this.Hide();
-            AddNew1 add1 = new AddNew1();
-            add1.ShowDialog();
-            this.Show();
-        }
-
-        private void btnNext2_Click(object sender, EventArgs e)
+        private void btnNext1_Click(object sender, EventArgs e)
         {
             // Hides this form and loads the next form
             this.Hide();
-            AddNew3 add3 = new AddNew3();
-            add3.Show();
+            AddBusinessContactInfo add2 = new AddBusinessContactInfo();
+            add2.Show();
         }
 
-        private void btnCancel2_Click(object sender, EventArgs e)
+        private void btnCancel1_Click(object sender, EventArgs e)
         {
             // Clears the form
             ClearAllText(this);
         }
 
-           // The Method that clears the text Boxes
+
+        // The Method that clears the text Boxes
         private void ClearAllText(Control con)
         {
             foreach (Control c in con.Controls)
@@ -65,6 +56,7 @@ namespace JobHelperGuiBeta1
                     ((TextBox)c).Clear();
                 else
                     ClearAllText(c);
+
             }
         }
     }

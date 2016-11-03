@@ -537,6 +537,7 @@
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(853, 551);
+            this.ControlBox = false;
             this.Controls.Add(this.btnReturn2Main);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnModify);

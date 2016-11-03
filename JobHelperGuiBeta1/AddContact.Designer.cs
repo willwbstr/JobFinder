@@ -1,6 +1,6 @@
 ﻿namespace JobHelperGuiBeta1
 {
-    partial class AddNew3
+    partial class AddContact
     {
         /// <summary>
         /// Required designer variable.
@@ -228,7 +228,7 @@
             this.btnCancel3.UseVisualStyleBackColor = true;
             this.btnCancel3.Click += new System.EventHandler(this.btnCancel3_Click);
             // 
-            // AddNew3
+            // AddContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,8 +249,8 @@
             this.Controls.Add(this.contactFirstNameTextBox);
             this.Controls.Add(contactLastNameLabel);
             this.Controls.Add(this.txtContactLastName);
-            this.Name = "AddNew3";
-            this.Text = "AddNew3";
+            this.Name = "AddContact";
+            this.Text = "Add Contact";
             this.Load += new System.EventHandler(this.AddNew3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();

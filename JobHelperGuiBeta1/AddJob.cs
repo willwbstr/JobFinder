@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JobHelperGuiBeta1
 {
-    public partial class AddNew4 : Form
+    public partial class AddJob : Form
     {
-        public AddNew4()
+        public AddJob()
         {
             InitializeComponent();
         }
@@ -63,7 +63,7 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the previous 
             this.Hide();
-            AddNew3 add3 = new AddNew3();
+            AddContact add3 = new AddContact();
             add3.ShowDialog();
             this.Show();
         }

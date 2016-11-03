@@ -1,6 +1,6 @@
 ﻿namespace JobHelperGuiBeta1
 {
-    partial class AddNew2
+    partial class AddBusinessContactInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -194,7 +194,7 @@
             this.btnCancel2.UseVisualStyleBackColor = true;
             this.btnCancel2.Click += new System.EventHandler(this.btnCancel2_Click);
             // 
-            // AddNew2
+            // AddBusinessContactInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,8 +213,8 @@
             this.Controls.Add(this.businessPhoneTextBox);
             this.Controls.Add(faxLabel);
             this.Controls.Add(this.faxTextBox);
-            this.Name = "AddNew2";
-            this.Text = "AddNew2";
+            this.Name = "AddBusinessContactInfo";
+            this.Text = "Add Business Contact Info";
             this.Load += new System.EventHandler(this.AddNew2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).EndInit();

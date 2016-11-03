@@ -1,6 +1,6 @@
 ﻿namespace JobHelperGuiBeta1
 {
-    partial class AddNew4
+    partial class AddJob
     {
         /// <summary>
         /// Required designer variable.
@@ -172,7 +172,6 @@
             this.btnNext4.TabIndex = 10;
             this.btnNext4.Text = "Next";
             this.btnNext4.UseVisualStyleBackColor = true;
-           
             // 
             // btnCancel4
             // 
@@ -194,12 +193,13 @@
             this.btnPrevious4.UseVisualStyleBackColor = true;
             this.btnPrevious4.Click += new System.EventHandler(this.btnPrevious4_Click);
             // 
-            // AddNew4
+            // AddJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(414, 295);
+            this.ControlBox = false;
             this.Controls.Add(this.btnPrevious4);
             this.Controls.Add(this.btnCancel4);
             this.Controls.Add(this.btnNext4);
@@ -213,8 +213,8 @@
             this.Controls.Add(this.txtSourceOfJob);
             this.Controls.Add(jobLabel);
             this.Controls.Add(this.txtJob);
-            this.Name = "AddNew4";
-            this.Text = "AddNew4";
+            this.Name = "AddJob";
+            this.Text = "Add Job";
             this.Load += new System.EventHandler(this.AddNew4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();

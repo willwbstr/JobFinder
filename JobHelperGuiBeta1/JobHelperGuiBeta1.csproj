@@ -59,29 +59,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNew1.cs">
+    <Compile Include="AddBusiness.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNew1.Designer.cs">
-      <DependentUpon>AddNew1.cs</DependentUpon>
+    <Compile Include="AddBusiness.Designer.cs">
+      <DependentUpon>AddBusiness.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNew2.cs">
+    <Compile Include="AddBusinessContactInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNew2.Designer.cs">
-      <DependentUpon>AddNew2.cs</DependentUpon>
+    <Compile Include="AddBusinessContactInfo.Designer.cs">
+      <DependentUpon>AddBusinessContactInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNew3.cs">
+    <Compile Include="AddContact.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNew3.Designer.cs">
-      <DependentUpon>AddNew3.cs</DependentUpon>
+    <Compile Include="AddContact.Designer.cs">
+      <DependentUpon>AddContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNew4.cs">
+    <Compile Include="AddJob.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNew4.Designer.cs">
-      <DependentUpon>AddNew4.cs</DependentUpon>
+    <Compile Include="AddJob.Designer.cs">
+      <DependentUpon>AddJob.cs</DependentUpon>
     </Compile>
     <Compile Include="MainGui.cs">
       <SubType>Form</SubType>
@@ -114,17 +114,17 @@
     <Compile Include="Results_Modify.Designer.cs">
       <DependentUpon>Results_Modify.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNew1.resx">
-      <DependentUpon>AddNew1.cs</DependentUpon>
+    <EmbeddedResource Include="AddBusiness.resx">
+      <DependentUpon>AddBusiness.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNew2.resx">
-      <DependentUpon>AddNew2.cs</DependentUpon>
+    <EmbeddedResource Include="AddBusinessContactInfo.resx">
+      <DependentUpon>AddBusinessContactInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNew3.resx">
-      <DependentUpon>AddNew3.cs</DependentUpon>
+    <EmbeddedResource Include="AddContact.resx">
+      <DependentUpon>AddContact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddNew4.resx">
-      <DependentUpon>AddNew4.cs</DependentUpon>
+    <EmbeddedResource Include="AddJob.resx">
+      <DependentUpon>AddJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainGui.resx">
       <DependentUpon>MainGui.cs</DependentUpon>

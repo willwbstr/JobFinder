@@ -31,7 +31,7 @@ namespace JobHelperGuiBeta1
         {
             // Displays the Add Form
             this.Hide();
-            AddNew1 add1 = new AddNew1();
+            AddBusiness add1 = new AddBusiness();
             add1.Show();
         }
 
