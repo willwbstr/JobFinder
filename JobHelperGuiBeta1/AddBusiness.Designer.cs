@@ -209,6 +209,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(421, 269);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancel1);
             this.Controls.Add(this.btnNext1);
             this.Controls.Add(zipLabel);

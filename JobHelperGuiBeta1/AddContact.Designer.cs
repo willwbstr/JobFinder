@@ -234,6 +234,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(442, 306);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancel3);
             this.Controls.Add(contactNumberLabel);
             this.Controls.Add(this.txtcontactNumber);
