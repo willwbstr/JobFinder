@@ -49,6 +49,7 @@
             this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "C W M I ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSearch
             // 
@@ -68,6 +69,7 @@
             this.txtDisplayFormat.TabIndex = 3;
             this.txtDisplayFormat.Text = "Display Format Desired";
             this.txtDisplayFormat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDisplayFormat.TextChanged += new System.EventHandler(this.txtDisplayFormat_TextChanged);
             // 
             // Search
             // 

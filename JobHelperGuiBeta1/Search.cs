@@ -35,6 +35,16 @@ namespace JobHelperGuiBeta1
 
         }
 
+        private void txtDisplayFormat_TextChanged(object sender, EventArgs e)
+        {
+            // Will display the format needed for the seach criteria chosen from the Main Gui form.
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            // Will change depending on the selection of the search criteria from the Main Gui
+        }
+
 
 
     }
