@@ -72,7 +72,8 @@ namespace JobHelperGuiBeta1
 
         private void cboMethodOfContact_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cboMethodOfContact.SelectedValue = // methods listed for contact
+            //cboMethodOfContact.SelectedValue = // methods listed for contact
+        
         }
     }
 }

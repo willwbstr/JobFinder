@@ -36,38 +36,21 @@
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label stateLabel;
             System.Windows.Forms.Label zipLabel;
-            this.jobFinderDataSet = new JobHelperGuiBeta1.JobFinderDataSet();
-            this.businessBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.businessTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.BusinessTableAdapter();
-            this.tableAdapterManager = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager();
-            this.contactTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.ContactTableAdapter();
-            this.jobTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.JobTableAdapter();
-            this.phoneTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.PhoneTableAdapter();
+            System.Windows.Forms.Label lblContactLastName;
+            System.Windows.Forms.Label lblContactFirstName;
+            System.Windows.Forms.Label lblBusinessPhone;
+            System.Windows.Forms.Label lblFax;
+            System.Windows.Forms.Label lblEmail;
+            System.Windows.Forms.Label lblWebsite;
+            System.Windows.Forms.Label lblMethodOfContact;
+            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label lblJob;
+            System.Windows.Forms.Label lblSourceOfJob;
+            System.Windows.Forms.Label lblSalary;
+            System.Windows.Forms.Label lblStatus;
+            System.Windows.Forms.Label lblNotes;
             this.txtBusinessID = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.businessPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.website = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.contactLastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactFirstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.methodOfContactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.jobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sourceOfJobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.contactNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtBusinessName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtAddress2 = new System.Windows.Forms.TextBox();
@@ -77,9 +60,25 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReturn2Main = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showReportFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.god = new JobHelperGuiBeta1.God();
+            this.txtContactLastName = new System.Windows.Forms.TextBox();
+            this.txtContactFirstName = new System.Windows.Forms.TextBox();
+            this.txtContactNumber = new System.Windows.Forms.TextBox();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.businessPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.txtFax = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtWebsite = new System.Windows.Forms.TextBox();
+            this.contactTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.ContactTableAdapter();
+            this.txtMethodOfContact = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jobTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.JobTableAdapter();
+            this.txtJob = new System.Windows.Forms.TextBox();
+            this.txtSourceOfJob = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.notesTextBox = new System.Windows.Forms.TextBox();
             businessIDLabel = new System.Windows.Forms.Label();
             businessNameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
@@ -87,22 +86,28 @@
             cityLabel = new System.Windows.Forms.Label();
             stateLabel = new System.Windows.Forms.Label();
             zipLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
+            lblContactLastName = new System.Windows.Forms.Label();
+            lblContactFirstName = new System.Windows.Forms.Label();
+            lblBusinessPhone = new System.Windows.Forms.Label();
+            lblFax = new System.Windows.Forms.Label();
+            lblEmail = new System.Windows.Forms.Label();
+            lblWebsite = new System.Windows.Forms.Label();
+            lblMethodOfContact = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
+            lblJob = new System.Windows.Forms.Label();
+            lblSourceOfJob = new System.Windows.Forms.Label();
+            lblSalary = new System.Windows.Forms.Label();
+            lblStatus = new System.Windows.Forms.Label();
+            lblNotes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.god)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // businessIDLabel
             // 
             businessIDLabel.AutoSize = true;
-            businessIDLabel.Location = new System.Drawing.Point(24, 33);
+            businessIDLabel.Location = new System.Drawing.Point(29, 33);
             businessIDLabel.Name = "businessIDLabel";
             businessIDLabel.Size = new System.Drawing.Size(86, 17);
             businessIDLabel.TabIndex = 1;
@@ -120,7 +125,7 @@
             // addressLabel
             // 
             addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(47, 73);
+            addressLabel.Location = new System.Drawing.Point(51, 67);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(64, 17);
             addressLabel.TabIndex = 8;
@@ -129,7 +134,7 @@
             // address2Label
             // 
             address2Label.AutoSize = true;
-            address2Label.Location = new System.Drawing.Point(39, 108);
+            address2Label.Location = new System.Drawing.Point(39, 102);
             address2Label.Name = "address2Label";
             address2Label.Size = new System.Drawing.Size(76, 17);
             address2Label.TabIndex = 10;
@@ -138,7 +143,7 @@
             // cityLabel
             // 
             cityLabel.AutoSize = true;
-            cityLabel.Location = new System.Drawing.Point(450, 70);
+            cityLabel.Location = new System.Drawing.Point(450, 64);
             cityLabel.Name = "cityLabel";
             cityLabel.Size = new System.Drawing.Size(35, 17);
             cityLabel.TabIndex = 12;
@@ -147,7 +152,7 @@
             // stateLabel
             // 
             stateLabel.AutoSize = true;
-            stateLabel.Location = new System.Drawing.Point(440, 108);
+            stateLabel.Location = new System.Drawing.Point(440, 102);
             stateLabel.Name = "stateLabel";
             stateLabel.Size = new System.Drawing.Size(45, 17);
             stateLabel.TabIndex = 14;
@@ -156,242 +161,40 @@
             // zipLabel
             // 
             zipLabel.AutoSize = true;
-            zipLabel.Location = new System.Drawing.Point(453, 143);
+            zipLabel.Location = new System.Drawing.Point(453, 137);
             zipLabel.Name = "zipLabel";
             zipLabel.Size = new System.Drawing.Size(32, 17);
             zipLabel.TabIndex = 16;
             zipLabel.Text = "Zip:";
             // 
-            // jobFinderDataSet
+            // lblContactLastName
             // 
-            this.jobFinderDataSet.DataSetName = "JobFinderDataSet";
-            this.jobFinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            lblContactLastName.AutoSize = true;
+            lblContactLastName.Location = new System.Drawing.Point(39, 231);
+            lblContactLastName.Name = "lblContactLastName";
+            lblContactLastName.Size = new System.Drawing.Size(132, 17);
+            lblContactLastName.TabIndex = 22;
+            lblContactLastName.Text = "Contact Last Name:";
             // 
-            // businessBindingSource
+            // lblContactFirstName
             // 
-            this.businessBindingSource.DataMember = "Business";
-            this.businessBindingSource.DataSource = this.jobFinderDataSet;
-            // 
-            // businessTableAdapter
-            // 
-            this.businessTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BusinessTableAdapter = this.businessTableAdapter;
-            this.tableAdapterManager.ContactTableAdapter = this.contactTableAdapter;
-            this.tableAdapterManager.EventsTableAdapter = null;
-            this.tableAdapterManager.JobTableAdapter = this.jobTableAdapter;
-            this.tableAdapterManager.PhoneTableAdapter = this.phoneTableAdapter;
-            this.tableAdapterManager.UpdateOrder = JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // contactTableAdapter
-            // 
-            this.contactTableAdapter.ClearBeforeFill = true;
-            // 
-            // jobTableAdapter
-            // 
-            this.jobTableAdapter.ClearBeforeFill = true;
-            // 
-            // phoneTableAdapter
-            // 
-            this.phoneTableAdapter.ClearBeforeFill = true;
+            lblContactFirstName.AutoSize = true;
+            lblContactFirstName.Location = new System.Drawing.Point(39, 266);
+            lblContactFirstName.Name = "lblContactFirstName";
+            lblContactFirstName.Size = new System.Drawing.Size(132, 17);
+            lblContactFirstName.TabIndex = 23;
+            lblContactFirstName.Text = "Contact First Name:";
             // 
             // txtBusinessID
             // 
-            this.txtBusinessID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "businessID", true));
-            this.txtBusinessID.Location = new System.Drawing.Point(115, 30);
+            this.txtBusinessID.Location = new System.Drawing.Point(120, 30);
             this.txtBusinessID.Name = "txtBusinessID";
             this.txtBusinessID.Size = new System.Drawing.Size(167, 22);
             this.txtBusinessID.TabIndex = 2;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.businessPhoneDataGridViewTextBoxColumn,
-            this.fax,
-            this.emailDataGridViewTextBoxColumn,
-            this.website,
-            this.notesDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.businessBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 180);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(829, 97);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // businessPhoneDataGridViewTextBoxColumn
-            // 
-            this.businessPhoneDataGridViewTextBoxColumn.DataPropertyName = "businessPhone";
-            this.businessPhoneDataGridViewTextBoxColumn.HeaderText = "Business Phone";
-            this.businessPhoneDataGridViewTextBoxColumn.Name = "businessPhoneDataGridViewTextBoxColumn";
-            this.businessPhoneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.businessPhoneDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // fax
-            // 
-            this.fax.DataPropertyName = "fax";
-            this.fax.HeaderText = "Fax";
-            this.fax.Name = "fax";
-            this.fax.ReadOnly = true;
-            this.fax.Width = 150;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // website
-            // 
-            this.website.DataPropertyName = "website";
-            this.website.HeaderText = "Website";
-            this.website.Name = "website";
-            this.website.ReadOnly = true;
-            this.website.Width = 150;
-            // 
-            // notesDataGridViewTextBoxColumn
-            // 
-            this.notesDataGridViewTextBoxColumn.DataPropertyName = "notes";
-            this.notesDataGridViewTextBoxColumn.HeaderText = "Notes";
-            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
-            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.notesDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.contactLastNameDataGridViewTextBoxColumn,
-            this.contactFirstNameDataGridViewTextBoxColumn,
-            this.methodOfContactDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn1,
-            this.notesDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.contactBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 277);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(829, 106);
-            this.dataGridView2.TabIndex = 4;
-            // 
-            // contactLastNameDataGridViewTextBoxColumn
-            // 
-            this.contactLastNameDataGridViewTextBoxColumn.DataPropertyName = "contactLastName";
-            this.contactLastNameDataGridViewTextBoxColumn.HeaderText = "Contact Last Name";
-            this.contactLastNameDataGridViewTextBoxColumn.Name = "contactLastNameDataGridViewTextBoxColumn";
-            this.contactLastNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // contactFirstNameDataGridViewTextBoxColumn
-            // 
-            this.contactFirstNameDataGridViewTextBoxColumn.DataPropertyName = "contactFirstName";
-            this.contactFirstNameDataGridViewTextBoxColumn.HeaderText = "Contact First Name";
-            this.contactFirstNameDataGridViewTextBoxColumn.Name = "contactFirstNameDataGridViewTextBoxColumn";
-            this.contactFirstNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // methodOfContactDataGridViewTextBoxColumn
-            // 
-            this.methodOfContactDataGridViewTextBoxColumn.DataPropertyName = "methodOfContact";
-            this.methodOfContactDataGridViewTextBoxColumn.HeaderText = "Method Of Contact";
-            this.methodOfContactDataGridViewTextBoxColumn.Name = "methodOfContactDataGridViewTextBoxColumn";
-            this.methodOfContactDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "E-mail";
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
-            this.emailDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // notesDataGridViewTextBoxColumn1
-            // 
-            this.notesDataGridViewTextBoxColumn1.DataPropertyName = "notes";
-            this.notesDataGridViewTextBoxColumn1.HeaderText = "Notes";
-            this.notesDataGridViewTextBoxColumn1.Name = "notesDataGridViewTextBoxColumn1";
-            this.notesDataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // contactBindingSource
-            // 
-            this.contactBindingSource.DataMember = "Contact";
-            this.contactBindingSource.DataSource = this.jobFinderDataSet;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.jobDataGridViewTextBoxColumn,
-            this.sourceOfJobDataGridViewTextBoxColumn,
-            this.salaryDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.notesDataGridViewTextBoxColumn2});
-            this.dataGridView3.DataSource = this.jobBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(4, 383);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(829, 75);
-            this.dataGridView3.TabIndex = 5;
-            // 
-            // jobDataGridViewTextBoxColumn
-            // 
-            this.jobDataGridViewTextBoxColumn.DataPropertyName = "job";
-            this.jobDataGridViewTextBoxColumn.HeaderText = "Job";
-            this.jobDataGridViewTextBoxColumn.Name = "jobDataGridViewTextBoxColumn";
-            this.jobDataGridViewTextBoxColumn.ReadOnly = true;
-            this.jobDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // sourceOfJobDataGridViewTextBoxColumn
-            // 
-            this.sourceOfJobDataGridViewTextBoxColumn.DataPropertyName = "sourceOfJob";
-            this.sourceOfJobDataGridViewTextBoxColumn.HeaderText = "Source Of Job";
-            this.sourceOfJobDataGridViewTextBoxColumn.Name = "sourceOfJobDataGridViewTextBoxColumn";
-            this.sourceOfJobDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sourceOfJobDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // salaryDataGridViewTextBoxColumn
-            // 
-            this.salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
-            this.salaryDataGridViewTextBoxColumn.HeaderText = "Salary";
-            this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
-            this.salaryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.salaryDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // notesDataGridViewTextBoxColumn2
-            // 
-            this.notesDataGridViewTextBoxColumn2.DataPropertyName = "notes";
-            this.notesDataGridViewTextBoxColumn2.HeaderText = "Notes";
-            this.notesDataGridViewTextBoxColumn2.Name = "notesDataGridViewTextBoxColumn2";
-            this.notesDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.notesDataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // jobBindingSource
-            // 
-            this.jobBindingSource.DataMember = "Job";
-            this.jobBindingSource.DataSource = this.jobFinderDataSet;
-            // 
             // dataGridView4
             // 
-            this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.contactNumberDataGridViewTextBoxColumn,
-            this.notesDataGridViewTextBoxColumn3});
-            this.dataGridView4.DataSource = this.phoneBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(4, 458);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
@@ -399,30 +202,8 @@
             this.dataGridView4.Size = new System.Drawing.Size(829, 92);
             this.dataGridView4.TabIndex = 6;
             // 
-            // contactNumberDataGridViewTextBoxColumn
-            // 
-            this.contactNumberDataGridViewTextBoxColumn.DataPropertyName = "contactNumber";
-            this.contactNumberDataGridViewTextBoxColumn.HeaderText = "Contact Number";
-            this.contactNumberDataGridViewTextBoxColumn.Name = "contactNumberDataGridViewTextBoxColumn";
-            this.contactNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contactNumberDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // notesDataGridViewTextBoxColumn3
-            // 
-            this.notesDataGridViewTextBoxColumn3.DataPropertyName = "notes";
-            this.notesDataGridViewTextBoxColumn3.HeaderText = "Notes";
-            this.notesDataGridViewTextBoxColumn3.Name = "notesDataGridViewTextBoxColumn3";
-            this.notesDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.notesDataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // phoneBindingSource
-            // 
-            this.phoneBindingSource.DataMember = "Phone";
-            this.phoneBindingSource.DataSource = this.jobFinderDataSet;
-            // 
             // txtBusinessName
             // 
-            this.txtBusinessName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "businessName", true));
             this.txtBusinessName.Location = new System.Drawing.Point(438, 27);
             this.txtBusinessName.Name = "txtBusinessName";
             this.txtBusinessName.Size = new System.Drawing.Size(228, 22);
@@ -430,8 +211,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "address", true));
-            this.txtAddress.Location = new System.Drawing.Point(116, 70);
+            this.txtAddress.Location = new System.Drawing.Point(120, 64);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ReadOnly = true;
@@ -441,8 +221,7 @@
             // 
             // txtAddress2
             // 
-            this.txtAddress2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "address2", true));
-            this.txtAddress2.Location = new System.Drawing.Point(116, 105);
+            this.txtAddress2.Location = new System.Drawing.Point(120, 99);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.ReadOnly = true;
             this.txtAddress2.Size = new System.Drawing.Size(272, 22);
@@ -450,8 +229,7 @@
             // 
             // txtCity
             // 
-            this.txtCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "city", true));
-            this.txtCity.Location = new System.Drawing.Point(489, 67);
+            this.txtCity.Location = new System.Drawing.Point(489, 61);
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
             this.txtCity.Size = new System.Drawing.Size(177, 22);
@@ -459,8 +237,7 @@
             // 
             // txtState
             // 
-            this.txtState.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "state", true));
-            this.txtState.Location = new System.Drawing.Point(489, 105);
+            this.txtState.Location = new System.Drawing.Point(489, 99);
             this.txtState.Name = "txtState";
             this.txtState.ReadOnly = true;
             this.txtState.Size = new System.Drawing.Size(177, 22);
@@ -468,8 +245,7 @@
             // 
             // txtZip
             // 
-            this.txtZip.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "zip", true));
-            this.txtZip.Location = new System.Drawing.Point(489, 140);
+            this.txtZip.Location = new System.Drawing.Point(489, 134);
             this.txtZip.Name = "txtZip";
             this.txtZip.ReadOnly = true;
             this.txtZip.Size = new System.Drawing.Size(126, 22);
@@ -505,30 +281,230 @@
             this.btnReturn2Main.UseVisualStyleBackColor = true;
             this.btnReturn2Main.Click += new System.EventHandler(this.btnReturn2Main_Click);
             // 
-            // menuStrip1
+            // god
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(853, 28);
-            this.menuStrip1.TabIndex = 22;
-            this.menuStrip1.Text = "menuStrip1";
+            this.god.DataSetName = "God";
+            this.god.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportsToolStripMenuItem
+            // txtContactLastName
             // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showReportFileToolStripMenuItem});
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
-            this.reportsToolStripMenuItem.Text = "Reports";
+            this.txtContactLastName.Location = new System.Drawing.Point(175, 231);
+            this.txtContactLastName.Name = "txtContactLastName";
+            this.txtContactLastName.Size = new System.Drawing.Size(213, 22);
+            this.txtContactLastName.TabIndex = 23;
             // 
-            // showReportFileToolStripMenuItem
+            // txtContactFirstName
             // 
-            this.showReportFileToolStripMenuItem.Name = "showReportFileToolStripMenuItem";
-            this.showReportFileToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.showReportFileToolStripMenuItem.Text = "Show Report";
+            this.txtContactFirstName.Location = new System.Drawing.Point(175, 263);
+            this.txtContactFirstName.Name = "txtContactFirstName";
+            this.txtContactFirstName.Size = new System.Drawing.Size(213, 22);
+            this.txtContactFirstName.TabIndex = 24;
+            // 
+            // txtContactNumber
+            // 
+            this.txtContactNumber.Location = new System.Drawing.Point(175, 293);
+            this.txtContactNumber.Name = "txtContactNumber";
+            this.txtContactNumber.Size = new System.Drawing.Size(213, 22);
+            this.txtContactNumber.TabIndex = 25;
+            // 
+            // lblContact
+            // 
+            this.lblContact.AutoSize = true;
+            this.lblContact.Location = new System.Drawing.Point(61, 298);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(110, 17);
+            this.lblContact.TabIndex = 26;
+            this.lblContact.Text = "Contact Number";
+            // 
+            // lblBusinessPhone
+            // 
+            lblBusinessPhone.AutoSize = true;
+            lblBusinessPhone.Location = new System.Drawing.Point(2, 134);
+            lblBusinessPhone.Name = "lblBusinessPhone";
+            lblBusinessPhone.Size = new System.Drawing.Size(114, 17);
+            lblBusinessPhone.TabIndex = 27;
+            lblBusinessPhone.Text = "Business Phone:";
+            // 
+            // businessPhoneTextBox
+            // 
+            this.businessPhoneTextBox.Location = new System.Drawing.Point(121, 131);
+            this.businessPhoneTextBox.Name = "businessPhoneTextBox";
+            this.businessPhoneTextBox.Size = new System.Drawing.Size(109, 22);
+            this.businessPhoneTextBox.TabIndex = 28;
+            // 
+            // lblFax
+            // 
+            lblFax.AutoSize = true;
+            lblFax.Location = new System.Drawing.Point(247, 135);
+            lblFax.Name = "lblFax";
+            lblFax.Size = new System.Drawing.Size(34, 17);
+            lblFax.TabIndex = 28;
+            lblFax.Text = "Fax:";
+            // 
+            // txtFax
+            // 
+            this.txtFax.Location = new System.Drawing.Point(285, 132);
+            this.txtFax.Name = "txtFax";
+            this.txtFax.Size = new System.Drawing.Size(154, 22);
+            this.txtFax.TabIndex = 29;
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new System.Drawing.Point(29, 181);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(46, 17);
+            lblEmail.TabIndex = 29;
+            lblEmail.Text = "Email:";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(78, 178);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(309, 22);
+            this.txtEmail.TabIndex = 30;
+            this.txtEmail.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
+            // 
+            // lblWebsite
+            // 
+            lblWebsite.AutoSize = true;
+            lblWebsite.Location = new System.Drawing.Point(424, 181);
+            lblWebsite.Name = "lblWebsite";
+            lblWebsite.Size = new System.Drawing.Size(63, 17);
+            lblWebsite.TabIndex = 31;
+            lblWebsite.Text = "Website:";
+            // 
+            // txtWebsite
+            // 
+            this.txtWebsite.Location = new System.Drawing.Point(491, 178);
+            this.txtWebsite.Name = "txtWebsite";
+            this.txtWebsite.Size = new System.Drawing.Size(281, 22);
+            this.txtWebsite.TabIndex = 32;
+            // 
+            // contactTableAdapter
+            // 
+            this.contactTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblMethodOfContact
+            // 
+            lblMethodOfContact.AutoSize = true;
+            lblMethodOfContact.Location = new System.Drawing.Point(424, 232);
+            lblMethodOfContact.Name = "lblMethodOfContact";
+            lblMethodOfContact.Size = new System.Drawing.Size(130, 17);
+            lblMethodOfContact.TabIndex = 33;
+            lblMethodOfContact.Text = "Method Of Contact:";
+            // 
+            // txtMethodOfContact
+            // 
+            this.txtMethodOfContact.Location = new System.Drawing.Point(560, 229);
+            this.txtMethodOfContact.Name = "txtMethodOfContact";
+            this.txtMethodOfContact.Size = new System.Drawing.Size(160, 22);
+            this.txtMethodOfContact.TabIndex = 34;
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(456, 266);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(98, 17);
+            emailLabel.TabIndex = 35;
+            emailLabel.Text = "Contact Email:";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(560, 261);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(190, 22);
+            this.emailTextBox.TabIndex = 36;
+            // 
+            // jobTableAdapter
+            // 
+            this.jobTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblJob
+            // 
+            lblJob.AutoSize = true;
+            lblJob.Location = new System.Drawing.Point(136, 337);
+            lblJob.Name = "lblJob";
+            lblJob.Size = new System.Drawing.Size(35, 17);
+            lblJob.TabIndex = 37;
+            lblJob.Text = "Job:";
+            // 
+            // txtJob
+            // 
+            this.txtJob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "job", true));
+            this.txtJob.Location = new System.Drawing.Point(175, 334);
+            this.txtJob.Name = "txtJob";
+            this.txtJob.Size = new System.Drawing.Size(210, 22);
+            this.txtJob.TabIndex = 38;
+            // 
+            // lblSourceOfJob
+            // 
+            lblSourceOfJob.AutoSize = true;
+            lblSourceOfJob.Location = new System.Drawing.Point(450, 334);
+            lblSourceOfJob.Name = "lblSourceOfJob";
+            lblSourceOfJob.Size = new System.Drawing.Size(103, 17);
+            lblSourceOfJob.TabIndex = 39;
+            lblSourceOfJob.Text = "Source Of Job:";
+            // 
+            // txtSourceOfJob
+            // 
+            this.txtSourceOfJob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "sourceOfJob", true));
+            this.txtSourceOfJob.Location = new System.Drawing.Point(557, 331);
+            this.txtSourceOfJob.Name = "txtSourceOfJob";
+            this.txtSourceOfJob.Size = new System.Drawing.Size(193, 22);
+            this.txtSourceOfJob.TabIndex = 40;
+            // 
+            // lblSalary
+            // 
+            lblSalary.AutoSize = true;
+            lblSalary.Location = new System.Drawing.Point(120, 364);
+            lblSalary.Name = "lblSalary";
+            lblSalary.Size = new System.Drawing.Size(52, 17);
+            lblSalary.TabIndex = 41;
+            lblSalary.Text = "Salary:";
+            // 
+            // txtSalary
+            // 
+            this.txtSalary.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "salary", true));
+            this.txtSalary.Location = new System.Drawing.Point(175, 361);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(143, 22);
+            this.txtSalary.TabIndex = 42;
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new System.Drawing.Point(503, 362);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new System.Drawing.Size(52, 17);
+            lblStatus.TabIndex = 43;
+            lblStatus.Text = "Status:";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "status", true));
+            this.txtStatus.Location = new System.Drawing.Point(559, 359);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(161, 22);
+            this.txtStatus.TabIndex = 44;
+            // 
+            // lblNotes
+            // 
+            lblNotes.AutoSize = true;
+            lblNotes.Location = new System.Drawing.Point(124, 413);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new System.Drawing.Size(49, 17);
+            lblNotes.TabIndex = 45;
+            lblNotes.Text = "Notes:";
+            // 
+            // notesTextBox
+            // 
+            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "notes", true));
+            this.notesTextBox.Location = new System.Drawing.Point(177, 410);
+            this.notesTextBox.Name = "notesTextBox";
+            this.notesTextBox.Size = new System.Drawing.Size(595, 22);
+            this.notesTextBox.TabIndex = 46;
             // 
             // Results_Modify
             // 
@@ -536,8 +512,36 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(853, 551);
+            this.ClientSize = new System.Drawing.Size(853, 570);
             this.ControlBox = false;
+            this.Controls.Add(lblNotes);
+            this.Controls.Add(this.notesTextBox);
+            this.Controls.Add(lblStatus);
+            this.Controls.Add(this.txtStatus);
+            this.Controls.Add(lblSalary);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(lblSourceOfJob);
+            this.Controls.Add(this.txtSourceOfJob);
+            this.Controls.Add(lblJob);
+            this.Controls.Add(this.txtJob);
+            this.Controls.Add(emailLabel);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(lblMethodOfContact);
+            this.Controls.Add(this.txtMethodOfContact);
+            this.Controls.Add(lblWebsite);
+            this.Controls.Add(this.txtWebsite);
+            this.Controls.Add(lblEmail);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(lblFax);
+            this.Controls.Add(this.txtFax);
+            this.Controls.Add(lblBusinessPhone);
+            this.Controls.Add(this.businessPhoneTextBox);
+            this.Controls.Add(this.lblContact);
+            this.Controls.Add(this.txtContactNumber);
+            this.Controls.Add(lblContactFirstName);
+            this.Controls.Add(this.txtContactFirstName);
+            this.Controls.Add(lblContactLastName);
+            this.Controls.Add(this.txtContactLastName);
             this.Controls.Add(this.btnReturn2Main);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnModify);
@@ -554,27 +558,14 @@
             this.Controls.Add(businessNameLabel);
             this.Controls.Add(this.txtBusinessName);
             this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(businessIDLabel);
             this.Controls.Add(this.txtBusinessID);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Results_Modify";
             this.Text = "Results_Modify";
             this.Load += new System.EventHandler(this.Results_Modify_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.god)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,38 +573,8 @@
 
         #endregion
 
-        private JobFinderDataSet jobFinderDataSet;
-        private System.Windows.Forms.BindingSource businessBindingSource;
-        private JobFinderDataSetTableAdapters.BusinessTableAdapter businessTableAdapter;
-        private JobFinderDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox txtBusinessID;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private JobFinderDataSetTableAdapters.ContactTableAdapter contactTableAdapter;
-        private System.Windows.Forms.BindingSource contactBindingSource;
-        private JobFinderDataSetTableAdapters.JobTableAdapter jobTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactLastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactFirstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn methodOfContactDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.BindingSource jobBindingSource;
-        private JobFinderDataSetTableAdapters.PhoneTableAdapter phoneTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jobDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sourceOfJobDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.BindingSource phoneBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn businessPhoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn website;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn3;
         private System.Windows.Forms.TextBox txtBusinessName;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtAddress2;
@@ -623,8 +584,24 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReturn2Main;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showReportFileToolStripMenuItem;
+        private God god;
+        private System.Windows.Forms.TextBox txtContactLastName;
+        private System.Windows.Forms.TextBox txtContactFirstName;
+        private System.Windows.Forms.TextBox txtContactNumber;
+        private System.Windows.Forms.Label lblContact;
+        private System.Windows.Forms.TextBox businessPhoneTextBox;
+        private System.Windows.Forms.TextBox txtFax;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtWebsite;
+        private JobFinderDataSetTableAdapters.ContactTableAdapter contactTableAdapter;
+        private JobFinderDataSetTableAdapters.JobTableAdapter jobTableAdapter;
+        private System.Windows.Forms.TextBox txtMethodOfContact;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.BindingSource jobBindingSource;
+        private System.Windows.Forms.TextBox txtJob;
+        private System.Windows.Forms.TextBox txtSourceOfJob;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox notesTextBox;
     }
 }

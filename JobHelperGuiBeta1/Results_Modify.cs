@@ -28,6 +28,14 @@ namespace JobHelperGuiBeta1
 
         private void Results_Modify_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'jobFinderDataSet.Job' table. You can move, or remove it, as needed.
+            this.jobTableAdapter.Fill(this.jobFinderDataSet.Job);
+            // TODO: This line of code loads data into the 'jobFinderDataSet.Contact' table. You can move, or remove it, as needed.
+            this.contactTableAdapter.Fill(this.jobFinderDataSet.Contact);
+            // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
+            this.businessTableAdapter.Fill(this.jobFinderDataSet.Business);
+            // TODO: This line of code loads data into the 'god.DataTable1' table. You can move, or remove it, as needed.
+            this.dataTable1TableAdapter.Fill(this.god.DataTable1);
             // TODO: This line of code loads data into the 'jobFinderDataSet.Phone' table. You can move, or remove it, as needed.
             this.phoneTableAdapter.Fill(this.jobFinderDataSet.Phone);
             // TODO: This line of code loads data into the 'jobFinderDataSet.Job' table. You can move, or remove it, as needed.
@@ -97,6 +105,19 @@ namespace JobHelperGuiBeta1
         }
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void businessBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.businessBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.jobFinderDataSet);
+
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
