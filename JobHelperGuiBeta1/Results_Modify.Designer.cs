@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label businessIDLabel;
             System.Windows.Forms.Label businessNameLabel;
             System.Windows.Forms.Label addressLabel;
@@ -60,7 +59,6 @@
             this.btnModify = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReturn2Main = new System.Windows.Forms.Button();
-            this.god = new JobHelperGuiBeta1.God();
             this.txtContactLastName = new System.Windows.Forms.TextBox();
             this.txtContactFirstName = new System.Windows.Forms.TextBox();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
@@ -69,11 +67,8 @@
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtWebsite = new System.Windows.Forms.TextBox();
-            this.contactTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.ContactTableAdapter();
             this.txtMethodOfContact = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jobTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.JobTableAdapter();
             this.txtJob = new System.Windows.Forms.TextBox();
             this.txtSourceOfJob = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
@@ -100,8 +95,6 @@
             lblStatus = new System.Windows.Forms.Label();
             lblNotes = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.god)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // businessIDLabel
@@ -380,11 +373,6 @@
             this.btnReturn2Main.UseVisualStyleBackColor = true;
             this.btnReturn2Main.Click += new System.EventHandler(this.btnReturn2Main_Click);
             // 
-            // god
-            // 
-            this.god.DataSetName = "God";
-            this.god.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // txtContactLastName
             // 
             this.txtContactLastName.Location = new System.Drawing.Point(175, 231);
@@ -444,10 +432,6 @@
             this.txtWebsite.Size = new System.Drawing.Size(281, 22);
             this.txtWebsite.TabIndex = 32;
             // 
-            // contactTableAdapter
-            // 
-            this.contactTableAdapter.ClearBeforeFill = true;
-            // 
             // txtMethodOfContact
             // 
             this.txtMethodOfContact.Location = new System.Drawing.Point(560, 229);
@@ -462,13 +446,8 @@
             this.emailTextBox.Size = new System.Drawing.Size(190, 22);
             this.emailTextBox.TabIndex = 36;
             // 
-            // jobTableAdapter
-            // 
-            this.jobTableAdapter.ClearBeforeFill = true;
-            // 
             // txtJob
             // 
-            this.txtJob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "job", true));
             this.txtJob.Location = new System.Drawing.Point(175, 334);
             this.txtJob.Name = "txtJob";
             this.txtJob.Size = new System.Drawing.Size(210, 22);
@@ -476,7 +455,6 @@
             // 
             // txtSourceOfJob
             // 
-            this.txtSourceOfJob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "sourceOfJob", true));
             this.txtSourceOfJob.Location = new System.Drawing.Point(557, 331);
             this.txtSourceOfJob.Name = "txtSourceOfJob";
             this.txtSourceOfJob.Size = new System.Drawing.Size(193, 22);
@@ -484,7 +462,6 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "salary", true));
             this.txtSalary.Location = new System.Drawing.Point(175, 361);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(143, 22);
@@ -492,7 +469,6 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "status", true));
             this.txtStatus.Location = new System.Drawing.Point(559, 359);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(161, 22);
@@ -500,7 +476,6 @@
             // 
             // notesTextBox
             // 
-            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "notes", true));
             this.notesTextBox.Location = new System.Drawing.Point(177, 410);
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.Size = new System.Drawing.Size(595, 22);
@@ -564,8 +539,6 @@
             this.Text = "Results_Modify";
             this.Load += new System.EventHandler(this.Results_Modify_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.god)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,7 +557,6 @@
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReturn2Main;
-        private God god;
         private System.Windows.Forms.TextBox txtContactLastName;
         private System.Windows.Forms.TextBox txtContactFirstName;
         private System.Windows.Forms.TextBox txtContactNumber;
@@ -593,11 +565,8 @@
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtWebsite;
-        private JobFinderDataSetTableAdapters.ContactTableAdapter contactTableAdapter;
-        private JobFinderDataSetTableAdapters.JobTableAdapter jobTableAdapter;
         private System.Windows.Forms.TextBox txtMethodOfContact;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.BindingSource jobBindingSource;
         private System.Windows.Forms.TextBox txtJob;
         private System.Windows.Forms.TextBox txtSourceOfJob;
         private System.Windows.Forms.TextBox txtSalary;

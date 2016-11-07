@@ -12,6 +12,8 @@ namespace JobHelperGuiBeta1
 {
     public partial class AddJob : Form
     {
+        Results_Modify R_M;
+        AddContact add3;
         public AddJob()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the Results_Modify form
             this.Hide();
-            Results_Modify R_M = new Results_Modify();
+            R_M = new Results_Modify();
             R_M.Show();
         }
 
@@ -60,9 +62,10 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the previous 
             this.Hide();
-            AddContact add3 = new AddContact();
+            add3 = new AddContact();
             add3.ShowDialog();
             this.Show();
         }
+
     }
 }

@@ -136,6 +136,7 @@
             this.btnNext4.TabIndex = 10;
             this.btnNext4.Text = "Next";
             this.btnNext4.UseVisualStyleBackColor = true;
+            this.btnNext4.Click += new System.EventHandler(this.btnNext4_Click);
             // 
             // btnCancel4
             // 
