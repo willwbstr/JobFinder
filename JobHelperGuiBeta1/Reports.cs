@@ -17,11 +17,6 @@ namespace JobHelperGuiBeta1
             InitializeComponent();
         }
 
-        private void Reports_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
-        }
+     
     }
 }

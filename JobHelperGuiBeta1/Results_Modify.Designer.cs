@@ -562,7 +562,7 @@
             this.Controls.Add(this.txtBusinessID);
             this.Name = "Results_Modify";
             this.Text = "Results_Modify";
-            this.Load += new System.EventHandler(this.Results_Modify_Load);
+          
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.god)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();

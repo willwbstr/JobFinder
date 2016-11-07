@@ -18,42 +18,11 @@ namespace JobHelperGuiBeta1
             InitializeComponent();
         }
 
-        private void businessBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.businessBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.jobFinderDataSet);
-
-        }
-
-        private void Results_Modify_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Job' table. You can move, or remove it, as needed.
-            this.jobTableAdapter.Fill(this.jobFinderDataSet.Job);
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Contact' table. You can move, or remove it, as needed.
-            this.contactTableAdapter.Fill(this.jobFinderDataSet.Contact);
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
-            this.businessTableAdapter.Fill(this.jobFinderDataSet.Business);
-            // TODO: This line of code loads data into the 'god.DataTable1' table. You can move, or remove it, as needed.
-            this.dataTable1TableAdapter.Fill(this.god.DataTable1);
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Phone' table. You can move, or remove it, as needed.
-            this.phoneTableAdapter.Fill(this.jobFinderDataSet.Phone);
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Job' table. You can move, or remove it, as needed.
-            this.jobTableAdapter.Fill(this.jobFinderDataSet.Job);
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Contact' table. You can move, or remove it, as needed.
-            this.contactTableAdapter.Fill(this.jobFinderDataSet.Contact);
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
-            this.businessTableAdapter.Fill(this.jobFinderDataSet.Business);
-
-            this.reportViewer1.RefreshReport();
-        }
-
+     
         private void btnModify_Click(object sender, EventArgs e)
         {
             // Takes everything off Read Only mode and allows for changes to be made.
-            this.dataGridView1.ReadOnly = false;
-            this.dataGridView2.ReadOnly = false;
-            this.dataGridView3.ReadOnly = false;
+        
             this.dataGridView4.ReadOnly = false;
             this.txtBusinessID.ReadOnly = false;
             this.txtBusinessName.ReadOnly = false;
@@ -68,9 +37,7 @@ namespace JobHelperGuiBeta1
         private void btnSave_Click(object sender, EventArgs e)
         {
             // Takes everythinfg to read only and saves to the database
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView3.ReadOnly = true;
+         
             this.dataGridView4.ReadOnly = true;
             this.txtBusinessID.ReadOnly = true;
             this.txtBusinessName.ReadOnly = true;
@@ -109,13 +76,6 @@ namespace JobHelperGuiBeta1
 
         }
 
-        private void businessBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.businessBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.jobFinderDataSet);
-
-        }
 
         private void emailTextBox_TextChanged(object sender, EventArgs e)
         {
