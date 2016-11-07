@@ -19,16 +19,13 @@ namespace JobHelperGuiBeta1
 
         private void jobBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.jobBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.jobFinderDataSet);
+          
 
         }
 
         private void AddNew4_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Job' table. You can move, or remove it, as needed.
-            this.jobTableAdapter.Fill(this.jobFinderDataSet.Job);
+          
 
         }
 

@@ -21,15 +21,13 @@ namespace JobHelperGuiBeta1
         private void businessBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.businessBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.jobFinderDataSet);
-
+           
         }
 
         private void AddNew2_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
-            this.businessTableAdapter.Fill(this.jobFinderDataSet.Business);
+           
             
         }
 

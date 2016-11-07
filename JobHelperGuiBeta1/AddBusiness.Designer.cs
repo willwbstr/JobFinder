@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label businessNameLabel;
             System.Windows.Forms.Label addressLabel;
             System.Windows.Forms.Label address2Label;
             System.Windows.Forms.Label cityLabel;
             System.Windows.Forms.Label stateLabel;
             System.Windows.Forms.Label zipLabel;
-            this.jobFinderDataSet = new JobHelperGuiBeta1.JobFinderDataSet();
-            this.businessBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.businessTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.BusinessTableAdapter();
-            this.tableAdapterManager = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager();
             this.businessNameTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.address2TextBox = new System.Windows.Forms.TextBox();
@@ -53,8 +48,6 @@
             cityLabel = new System.Windows.Forms.Label();
             stateLabel = new System.Windows.Forms.Label();
             zipLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // businessNameLabel
@@ -111,33 +104,8 @@
             zipLabel.TabIndex = 11;
             zipLabel.Text = "Zip:";
             // 
-            // jobFinderDataSet
-            // 
-            this.jobFinderDataSet.DataSetName = "JobFinderDataSet";
-            this.jobFinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // businessBindingSource
-            // 
-            this.businessBindingSource.DataMember = "Business";
-            this.businessBindingSource.DataSource = this.jobFinderDataSet;
-            // 
-            // businessTableAdapter
-            // 
-            this.businessTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BusinessTableAdapter = this.businessTableAdapter;
-            this.tableAdapterManager.ContactTableAdapter = null;
-            this.tableAdapterManager.EventsTableAdapter = null;
-            this.tableAdapterManager.JobTableAdapter = null;
-            this.tableAdapterManager.PhoneTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // businessNameTextBox
             // 
-            this.businessNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "businessName", true));
             this.businessNameTextBox.Location = new System.Drawing.Point(127, 22);
             this.businessNameTextBox.Name = "businessNameTextBox";
             this.businessNameTextBox.Size = new System.Drawing.Size(262, 22);
@@ -145,7 +113,6 @@
             // 
             // addressTextBox
             // 
-            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "address", true));
             this.addressTextBox.Location = new System.Drawing.Point(127, 62);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(262, 22);
@@ -153,7 +120,6 @@
             // 
             // address2TextBox
             // 
-            this.address2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "address2", true));
             this.address2TextBox.Location = new System.Drawing.Point(127, 103);
             this.address2TextBox.Name = "address2TextBox";
             this.address2TextBox.Size = new System.Drawing.Size(262, 22);
@@ -161,7 +127,6 @@
             // 
             // cityTextBox
             // 
-            this.cityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "city", true));
             this.cityTextBox.Location = new System.Drawing.Point(127, 142);
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(177, 22);
@@ -169,7 +134,6 @@
             // 
             // stateTextBox
             // 
-            this.stateTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "state", true));
             this.stateTextBox.Location = new System.Drawing.Point(127, 180);
             this.stateTextBox.Name = "stateTextBox";
             this.stateTextBox.Size = new System.Drawing.Size(177, 22);
@@ -177,7 +141,6 @@
             // 
             // zipTextBox
             // 
-            this.zipTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "zip", true));
             this.zipTextBox.Location = new System.Drawing.Point(127, 220);
             this.zipTextBox.Name = "zipTextBox";
             this.zipTextBox.Size = new System.Drawing.Size(100, 22);
@@ -227,8 +190,6 @@
             this.Name = "AddBusiness";
             this.Text = "Add Business";
             this.Load += new System.EventHandler(this.AddNew1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,10 +197,6 @@
 
         #endregion
 
-        private JobFinderDataSet jobFinderDataSet;
-        private System.Windows.Forms.BindingSource businessBindingSource;
-        private JobFinderDataSetTableAdapters.BusinessTableAdapter businessTableAdapter;
-        private JobFinderDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox businessNameTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TextBox address2TextBox;

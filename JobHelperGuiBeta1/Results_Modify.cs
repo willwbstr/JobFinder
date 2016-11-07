@@ -82,6 +82,11 @@ namespace JobHelperGuiBeta1
 
         }
 
+        private void Results_Modify_Load(object sender, EventArgs e)
+        {
+
+        }
+
     
     }
 }

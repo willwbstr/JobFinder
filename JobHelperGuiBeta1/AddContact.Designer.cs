@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label contactLastNameLabel;
             System.Windows.Forms.Label contactFirstNameLabel;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label notesLabel;
             System.Windows.Forms.Label methodOfContactLabel;
             System.Windows.Forms.Label contactNumberLabel;
-            this.jobFinderDataSet = new JobHelperGuiBeta1.JobFinderDataSet();
-            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contactTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.ContactTableAdapter();
-            this.tableAdapterManager = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager();
             this.txtContactLastName = new System.Windows.Forms.TextBox();
             this.contactFirstNameTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
@@ -46,8 +41,6 @@
             this.btnPrevious3 = new System.Windows.Forms.Button();
             this.btnNext3 = new System.Windows.Forms.Button();
             this.cboMethodOfContact = new System.Windows.Forms.ComboBox();
-            this.phoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.phoneTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.PhoneTableAdapter();
             this.txtcontactNumber = new System.Windows.Forms.TextBox();
             this.btnCancel3 = new System.Windows.Forms.Button();
             contactLastNameLabel = new System.Windows.Forms.Label();
@@ -56,9 +49,6 @@
             notesLabel = new System.Windows.Forms.Label();
             methodOfContactLabel = new System.Windows.Forms.Label();
             contactNumberLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // contactLastNameLabel
@@ -115,33 +105,8 @@
             contactNumberLabel.TabIndex = 12;
             contactNumberLabel.Text = "Contact Number:";
             // 
-            // jobFinderDataSet
-            // 
-            this.jobFinderDataSet.DataSetName = "JobFinderDataSet";
-            this.jobFinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // contactBindingSource
-            // 
-            this.contactBindingSource.DataMember = "Contact";
-            this.contactBindingSource.DataSource = this.jobFinderDataSet;
-            // 
-            // contactTableAdapter
-            // 
-            this.contactTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BusinessTableAdapter = null;
-            this.tableAdapterManager.ContactTableAdapter = this.contactTableAdapter;
-            this.tableAdapterManager.EventsTableAdapter = null;
-            this.tableAdapterManager.JobTableAdapter = null;
-            this.tableAdapterManager.PhoneTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // txtContactLastName
             // 
-            this.txtContactLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactBindingSource, "contactLastName", true));
             this.txtContactLastName.Location = new System.Drawing.Point(148, 23);
             this.txtContactLastName.Name = "txtContactLastName";
             this.txtContactLastName.Size = new System.Drawing.Size(258, 22);
@@ -149,7 +114,6 @@
             // 
             // contactFirstNameTextBox
             // 
-            this.contactFirstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactBindingSource, "contactFirstName", true));
             this.contactFirstNameTextBox.Location = new System.Drawing.Point(148, 60);
             this.contactFirstNameTextBox.Name = "contactFirstNameTextBox";
             this.contactFirstNameTextBox.Size = new System.Drawing.Size(258, 22);
@@ -157,7 +121,6 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactBindingSource, "email", true));
             this.emailTextBox.Location = new System.Drawing.Point(148, 176);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(258, 22);
@@ -165,7 +128,6 @@
             // 
             // notesTextBox
             // 
-            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactBindingSource, "notes", true));
             this.notesTextBox.Location = new System.Drawing.Point(150, 215);
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.Size = new System.Drawing.Size(256, 22);
@@ -193,7 +155,6 @@
             // 
             // cboMethodOfContact
             // 
-            this.cboMethodOfContact.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contactBindingSource, "methodOfContact", true));
             this.cboMethodOfContact.FormattingEnabled = true;
             this.cboMethodOfContact.Location = new System.Drawing.Point(148, 98);
             this.cboMethodOfContact.Name = "cboMethodOfContact";
@@ -201,18 +162,8 @@
             this.cboMethodOfContact.TabIndex = 12;
             this.cboMethodOfContact.SelectedIndexChanged += new System.EventHandler(this.cboMethodOfContact_SelectedIndexChanged);
             // 
-            // phoneBindingSource
-            // 
-            this.phoneBindingSource.DataMember = "Phone";
-            this.phoneBindingSource.DataSource = this.jobFinderDataSet;
-            // 
-            // phoneTableAdapter
-            // 
-            this.phoneTableAdapter.ClearBeforeFill = true;
-            // 
             // txtcontactNumber
             // 
-            this.txtcontactNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.phoneBindingSource, "contactNumber", true));
             this.txtcontactNumber.Location = new System.Drawing.Point(148, 137);
             this.txtcontactNumber.Name = "txtcontactNumber";
             this.txtcontactNumber.Size = new System.Drawing.Size(258, 22);
@@ -253,9 +204,6 @@
             this.Name = "AddContact";
             this.Text = "Add Contact";
             this.Load += new System.EventHandler(this.AddNew3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,10 +211,6 @@
 
         #endregion
 
-        private JobFinderDataSet jobFinderDataSet;
-        private System.Windows.Forms.BindingSource contactBindingSource;
-        private JobFinderDataSetTableAdapters.ContactTableAdapter contactTableAdapter;
-        private JobFinderDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox txtContactLastName;
         private System.Windows.Forms.TextBox contactFirstNameTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
@@ -274,8 +218,6 @@
         private System.Windows.Forms.Button btnPrevious3;
         private System.Windows.Forms.Button btnNext3;
         private System.Windows.Forms.ComboBox cboMethodOfContact;
-        private System.Windows.Forms.BindingSource phoneBindingSource;
-        private JobFinderDataSetTableAdapters.PhoneTableAdapter phoneTableAdapter;
         private System.Windows.Forms.TextBox txtcontactNumber;
         private System.Windows.Forms.Button btnCancel3;
     }

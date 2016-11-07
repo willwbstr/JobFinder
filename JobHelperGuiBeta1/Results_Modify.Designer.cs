@@ -185,6 +185,105 @@
             lblContactFirstName.TabIndex = 23;
             lblContactFirstName.Text = "Contact First Name:";
             // 
+            // lblBusinessPhone
+            // 
+            lblBusinessPhone.AutoSize = true;
+            lblBusinessPhone.Location = new System.Drawing.Point(2, 134);
+            lblBusinessPhone.Name = "lblBusinessPhone";
+            lblBusinessPhone.Size = new System.Drawing.Size(114, 17);
+            lblBusinessPhone.TabIndex = 27;
+            lblBusinessPhone.Text = "Business Phone:";
+            // 
+            // lblFax
+            // 
+            lblFax.AutoSize = true;
+            lblFax.Location = new System.Drawing.Point(247, 135);
+            lblFax.Name = "lblFax";
+            lblFax.Size = new System.Drawing.Size(34, 17);
+            lblFax.TabIndex = 28;
+            lblFax.Text = "Fax:";
+            // 
+            // lblEmail
+            // 
+            lblEmail.AutoSize = true;
+            lblEmail.Location = new System.Drawing.Point(29, 181);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new System.Drawing.Size(46, 17);
+            lblEmail.TabIndex = 29;
+            lblEmail.Text = "Email:";
+            // 
+            // lblWebsite
+            // 
+            lblWebsite.AutoSize = true;
+            lblWebsite.Location = new System.Drawing.Point(424, 181);
+            lblWebsite.Name = "lblWebsite";
+            lblWebsite.Size = new System.Drawing.Size(63, 17);
+            lblWebsite.TabIndex = 31;
+            lblWebsite.Text = "Website:";
+            // 
+            // lblMethodOfContact
+            // 
+            lblMethodOfContact.AutoSize = true;
+            lblMethodOfContact.Location = new System.Drawing.Point(424, 232);
+            lblMethodOfContact.Name = "lblMethodOfContact";
+            lblMethodOfContact.Size = new System.Drawing.Size(130, 17);
+            lblMethodOfContact.TabIndex = 33;
+            lblMethodOfContact.Text = "Method Of Contact:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(456, 266);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(98, 17);
+            emailLabel.TabIndex = 35;
+            emailLabel.Text = "Contact Email:";
+            // 
+            // lblJob
+            // 
+            lblJob.AutoSize = true;
+            lblJob.Location = new System.Drawing.Point(136, 337);
+            lblJob.Name = "lblJob";
+            lblJob.Size = new System.Drawing.Size(35, 17);
+            lblJob.TabIndex = 37;
+            lblJob.Text = "Job:";
+            // 
+            // lblSourceOfJob
+            // 
+            lblSourceOfJob.AutoSize = true;
+            lblSourceOfJob.Location = new System.Drawing.Point(450, 334);
+            lblSourceOfJob.Name = "lblSourceOfJob";
+            lblSourceOfJob.Size = new System.Drawing.Size(103, 17);
+            lblSourceOfJob.TabIndex = 39;
+            lblSourceOfJob.Text = "Source Of Job:";
+            // 
+            // lblSalary
+            // 
+            lblSalary.AutoSize = true;
+            lblSalary.Location = new System.Drawing.Point(120, 364);
+            lblSalary.Name = "lblSalary";
+            lblSalary.Size = new System.Drawing.Size(52, 17);
+            lblSalary.TabIndex = 41;
+            lblSalary.Text = "Salary:";
+            // 
+            // lblStatus
+            // 
+            lblStatus.AutoSize = true;
+            lblStatus.Location = new System.Drawing.Point(503, 362);
+            lblStatus.Name = "lblStatus";
+            lblStatus.Size = new System.Drawing.Size(52, 17);
+            lblStatus.TabIndex = 43;
+            lblStatus.Text = "Status:";
+            // 
+            // lblNotes
+            // 
+            lblNotes.AutoSize = true;
+            lblNotes.Location = new System.Drawing.Point(124, 413);
+            lblNotes.Name = "lblNotes";
+            lblNotes.Size = new System.Drawing.Size(49, 17);
+            lblNotes.TabIndex = 45;
+            lblNotes.Text = "Notes:";
+            // 
             // txtBusinessID
             // 
             this.txtBusinessID.Location = new System.Drawing.Point(120, 30);
@@ -316,30 +415,12 @@
             this.lblContact.TabIndex = 26;
             this.lblContact.Text = "Contact Number";
             // 
-            // lblBusinessPhone
-            // 
-            lblBusinessPhone.AutoSize = true;
-            lblBusinessPhone.Location = new System.Drawing.Point(2, 134);
-            lblBusinessPhone.Name = "lblBusinessPhone";
-            lblBusinessPhone.Size = new System.Drawing.Size(114, 17);
-            lblBusinessPhone.TabIndex = 27;
-            lblBusinessPhone.Text = "Business Phone:";
-            // 
             // businessPhoneTextBox
             // 
             this.businessPhoneTextBox.Location = new System.Drawing.Point(121, 131);
             this.businessPhoneTextBox.Name = "businessPhoneTextBox";
             this.businessPhoneTextBox.Size = new System.Drawing.Size(109, 22);
             this.businessPhoneTextBox.TabIndex = 28;
-            // 
-            // lblFax
-            // 
-            lblFax.AutoSize = true;
-            lblFax.Location = new System.Drawing.Point(247, 135);
-            lblFax.Name = "lblFax";
-            lblFax.Size = new System.Drawing.Size(34, 17);
-            lblFax.TabIndex = 28;
-            lblFax.Text = "Fax:";
             // 
             // txtFax
             // 
@@ -348,15 +429,6 @@
             this.txtFax.Size = new System.Drawing.Size(154, 22);
             this.txtFax.TabIndex = 29;
             // 
-            // lblEmail
-            // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new System.Drawing.Point(29, 181);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new System.Drawing.Size(46, 17);
-            lblEmail.TabIndex = 29;
-            lblEmail.Text = "Email:";
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(78, 178);
@@ -364,15 +436,6 @@
             this.txtEmail.Size = new System.Drawing.Size(309, 22);
             this.txtEmail.TabIndex = 30;
             this.txtEmail.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
-            // 
-            // lblWebsite
-            // 
-            lblWebsite.AutoSize = true;
-            lblWebsite.Location = new System.Drawing.Point(424, 181);
-            lblWebsite.Name = "lblWebsite";
-            lblWebsite.Size = new System.Drawing.Size(63, 17);
-            lblWebsite.TabIndex = 31;
-            lblWebsite.Text = "Website:";
             // 
             // txtWebsite
             // 
@@ -385,30 +448,12 @@
             // 
             this.contactTableAdapter.ClearBeforeFill = true;
             // 
-            // lblMethodOfContact
-            // 
-            lblMethodOfContact.AutoSize = true;
-            lblMethodOfContact.Location = new System.Drawing.Point(424, 232);
-            lblMethodOfContact.Name = "lblMethodOfContact";
-            lblMethodOfContact.Size = new System.Drawing.Size(130, 17);
-            lblMethodOfContact.TabIndex = 33;
-            lblMethodOfContact.Text = "Method Of Contact:";
-            // 
             // txtMethodOfContact
             // 
             this.txtMethodOfContact.Location = new System.Drawing.Point(560, 229);
             this.txtMethodOfContact.Name = "txtMethodOfContact";
             this.txtMethodOfContact.Size = new System.Drawing.Size(160, 22);
             this.txtMethodOfContact.TabIndex = 34;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(456, 266);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(98, 17);
-            emailLabel.TabIndex = 35;
-            emailLabel.Text = "Contact Email:";
             // 
             // emailTextBox
             // 
@@ -421,15 +466,6 @@
             // 
             this.jobTableAdapter.ClearBeforeFill = true;
             // 
-            // lblJob
-            // 
-            lblJob.AutoSize = true;
-            lblJob.Location = new System.Drawing.Point(136, 337);
-            lblJob.Name = "lblJob";
-            lblJob.Size = new System.Drawing.Size(35, 17);
-            lblJob.TabIndex = 37;
-            lblJob.Text = "Job:";
-            // 
             // txtJob
             // 
             this.txtJob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "job", true));
@@ -437,15 +473,6 @@
             this.txtJob.Name = "txtJob";
             this.txtJob.Size = new System.Drawing.Size(210, 22);
             this.txtJob.TabIndex = 38;
-            // 
-            // lblSourceOfJob
-            // 
-            lblSourceOfJob.AutoSize = true;
-            lblSourceOfJob.Location = new System.Drawing.Point(450, 334);
-            lblSourceOfJob.Name = "lblSourceOfJob";
-            lblSourceOfJob.Size = new System.Drawing.Size(103, 17);
-            lblSourceOfJob.TabIndex = 39;
-            lblSourceOfJob.Text = "Source Of Job:";
             // 
             // txtSourceOfJob
             // 
@@ -455,15 +482,6 @@
             this.txtSourceOfJob.Size = new System.Drawing.Size(193, 22);
             this.txtSourceOfJob.TabIndex = 40;
             // 
-            // lblSalary
-            // 
-            lblSalary.AutoSize = true;
-            lblSalary.Location = new System.Drawing.Point(120, 364);
-            lblSalary.Name = "lblSalary";
-            lblSalary.Size = new System.Drawing.Size(52, 17);
-            lblSalary.TabIndex = 41;
-            lblSalary.Text = "Salary:";
-            // 
             // txtSalary
             // 
             this.txtSalary.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "salary", true));
@@ -472,15 +490,6 @@
             this.txtSalary.Size = new System.Drawing.Size(143, 22);
             this.txtSalary.TabIndex = 42;
             // 
-            // lblStatus
-            // 
-            lblStatus.AutoSize = true;
-            lblStatus.Location = new System.Drawing.Point(503, 362);
-            lblStatus.Name = "lblStatus";
-            lblStatus.Size = new System.Drawing.Size(52, 17);
-            lblStatus.TabIndex = 43;
-            lblStatus.Text = "Status:";
-            // 
             // txtStatus
             // 
             this.txtStatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "status", true));
@@ -488,15 +497,6 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(161, 22);
             this.txtStatus.TabIndex = 44;
-            // 
-            // lblNotes
-            // 
-            lblNotes.AutoSize = true;
-            lblNotes.Location = new System.Drawing.Point(124, 413);
-            lblNotes.Name = "lblNotes";
-            lblNotes.Size = new System.Drawing.Size(49, 17);
-            lblNotes.TabIndex = 45;
-            lblNotes.Text = "Notes:";
             // 
             // notesTextBox
             // 
@@ -562,7 +562,7 @@
             this.Controls.Add(this.txtBusinessID);
             this.Name = "Results_Modify";
             this.Text = "Results_Modify";
-          
+            this.Load += new System.EventHandler(this.Results_Modify_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.god)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();

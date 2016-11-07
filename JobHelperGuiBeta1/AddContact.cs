@@ -19,18 +19,16 @@ namespace JobHelperGuiBeta1
 
         private void contactBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.contactBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.jobFinderDataSet);
+       
 
         }
 
         private void AddNew3_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Phone' table. You can move, or remove it, as needed.
-            this.phoneTableAdapter.Fill(this.jobFinderDataSet.Phone);
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Contact' table. You can move, or remove it, as needed.
-            this.contactTableAdapter.Fill(this.jobFinderDataSet.Contact);
+            //// TODO: This line of code loads data into the 'jobFinderDataSet.Phone' table. You can move, or remove it, as needed.
+            //this.phoneTableAdapter.Fill(this.jobFinderDataSet.Phone);
+            //// TODO: This line of code loads data into the 'jobFinderDataSet.Contact' table. You can move, or remove it, as needed.
+            //this.contactTableAdapter.Fill(this.jobFinderDataSet.Contact);
 
         }
 

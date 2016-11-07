@@ -28,16 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label faxLabel;
             System.Windows.Forms.Label businessPhoneLabel;
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label websiteLabel;
             System.Windows.Forms.Label notesLabel;
-            this.jobFinderDataSet = new JobHelperGuiBeta1.JobFinderDataSet();
-            this.businessBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.businessTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.BusinessTableAdapter();
-            this.tableAdapterManager = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager();
             this.faxTextBox = new System.Windows.Forms.TextBox();
             this.businessPhoneTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
@@ -51,8 +46,6 @@
             emailLabel = new System.Windows.Forms.Label();
             websiteLabel = new System.Windows.Forms.Label();
             notesLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // faxLabel
@@ -100,33 +93,8 @@
             notesLabel.TabIndex = 8;
             notesLabel.Text = "Notes:";
             // 
-            // jobFinderDataSet
-            // 
-            this.jobFinderDataSet.DataSetName = "JobFinderDataSet";
-            this.jobFinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // businessBindingSource
-            // 
-            this.businessBindingSource.DataMember = "Business";
-            this.businessBindingSource.DataSource = this.jobFinderDataSet;
-            // 
-            // businessTableAdapter
-            // 
-            this.businessTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BusinessTableAdapter = this.businessTableAdapter;
-            this.tableAdapterManager.ContactTableAdapter = null;
-            this.tableAdapterManager.EventsTableAdapter = null;
-            this.tableAdapterManager.JobTableAdapter = null;
-            this.tableAdapterManager.PhoneTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // faxTextBox
             // 
-            this.faxTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "fax", true));
             this.faxTextBox.Location = new System.Drawing.Point(128, 17);
             this.faxTextBox.Name = "faxTextBox";
             this.faxTextBox.Size = new System.Drawing.Size(253, 22);
@@ -134,7 +102,6 @@
             // 
             // businessPhoneTextBox
             // 
-            this.businessPhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "businessPhone", true));
             this.businessPhoneTextBox.Location = new System.Drawing.Point(126, 50);
             this.businessPhoneTextBox.Name = "businessPhoneTextBox";
             this.businessPhoneTextBox.Size = new System.Drawing.Size(255, 22);
@@ -142,7 +109,6 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "email", true));
             this.emailTextBox.Location = new System.Drawing.Point(126, 84);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(255, 22);
@@ -150,7 +116,6 @@
             // 
             // websiteTextBox
             // 
-            this.websiteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "website", true));
             this.websiteTextBox.Location = new System.Drawing.Point(128, 115);
             this.websiteTextBox.Name = "websiteTextBox";
             this.websiteTextBox.Size = new System.Drawing.Size(253, 22);
@@ -158,7 +123,6 @@
             // 
             // notesTextBox
             // 
-            this.notesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.businessBindingSource, "notes", true));
             this.notesTextBox.Location = new System.Drawing.Point(128, 146);
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.Size = new System.Drawing.Size(253, 22);
@@ -217,8 +181,6 @@
             this.Name = "AddBusinessContactInfo";
             this.Text = "Add Business Contact Info";
             this.Load += new System.EventHandler(this.AddNew2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.businessBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,10 +188,6 @@
 
         #endregion
 
-        private JobFinderDataSet jobFinderDataSet;
-        private System.Windows.Forms.BindingSource businessBindingSource;
-        private JobFinderDataSetTableAdapters.BusinessTableAdapter businessTableAdapter;
-        private JobFinderDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox faxTextBox;
         private System.Windows.Forms.TextBox businessPhoneTextBox;
         private System.Windows.Forms.TextBox emailTextBox;

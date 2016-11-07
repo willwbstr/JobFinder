@@ -28,16 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label jobLabel;
             System.Windows.Forms.Label sourceOfJobLabel;
             System.Windows.Forms.Label salaryLabel;
             System.Windows.Forms.Label statusLabel;
             System.Windows.Forms.Label notesLabel;
-            this.jobFinderDataSet = new JobHelperGuiBeta1.JobFinderDataSet();
-            this.jobBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jobTableAdapter = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.JobTableAdapter();
-            this.tableAdapterManager = new JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager();
             this.txtJob = new System.Windows.Forms.TextBox();
             this.txtSourceOfJob = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
@@ -51,8 +46,6 @@
             salaryLabel = new System.Windows.Forms.Label();
             statusLabel = new System.Windows.Forms.Label();
             notesLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // jobLabel
@@ -100,33 +93,8 @@
             notesLabel.TabIndex = 8;
             notesLabel.Text = "Notes:";
             // 
-            // jobFinderDataSet
-            // 
-            this.jobFinderDataSet.DataSetName = "JobFinderDataSet";
-            this.jobFinderDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // jobBindingSource
-            // 
-            this.jobBindingSource.DataMember = "Job";
-            this.jobBindingSource.DataSource = this.jobFinderDataSet;
-            // 
-            // jobTableAdapter
-            // 
-            this.jobTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BusinessTableAdapter = null;
-            this.tableAdapterManager.ContactTableAdapter = null;
-            this.tableAdapterManager.EventsTableAdapter = null;
-            this.tableAdapterManager.JobTableAdapter = this.jobTableAdapter;
-            this.tableAdapterManager.PhoneTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = JobHelperGuiBeta1.JobFinderDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // txtJob
             // 
-            this.txtJob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "job", true));
             this.txtJob.Location = new System.Drawing.Point(121, 27);
             this.txtJob.Name = "txtJob";
             this.txtJob.Size = new System.Drawing.Size(254, 22);
@@ -134,7 +102,6 @@
             // 
             // txtSourceOfJob
             // 
-            this.txtSourceOfJob.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "sourceOfJob", true));
             this.txtSourceOfJob.Location = new System.Drawing.Point(121, 64);
             this.txtSourceOfJob.Name = "txtSourceOfJob";
             this.txtSourceOfJob.Size = new System.Drawing.Size(254, 22);
@@ -142,7 +109,6 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "salary", true));
             this.txtSalary.Location = new System.Drawing.Point(121, 102);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(163, 22);
@@ -150,7 +116,6 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "status", true));
             this.txtStatus.Location = new System.Drawing.Point(121, 139);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(100, 22);
@@ -158,7 +123,6 @@
             // 
             // txtNotes
             // 
-            this.txtNotes.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jobBindingSource, "notes", true));
             this.txtNotes.Location = new System.Drawing.Point(121, 177);
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(254, 22);
@@ -216,8 +180,6 @@
             this.Name = "AddJob";
             this.Text = "Add Job";
             this.Load += new System.EventHandler(this.AddNew4_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.jobFinderDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jobBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,10 +187,6 @@
 
         #endregion
 
-        private JobFinderDataSet jobFinderDataSet;
-        private System.Windows.Forms.BindingSource jobBindingSource;
-        private JobFinderDataSetTableAdapters.JobTableAdapter jobTableAdapter;
-        private JobFinderDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox txtJob;
         private System.Windows.Forms.TextBox txtSourceOfJob;
         private System.Windows.Forms.TextBox txtSalary;

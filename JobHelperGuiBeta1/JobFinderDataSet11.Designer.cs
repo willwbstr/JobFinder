@@ -123,15 +123,15 @@ namespace JobHelperGuiBeta1 {
             }
         }
         
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EventsDataTable Events {
-            get {
-                return this.tableEvents;
-            }
-        }
+        //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        //[global::System.ComponentModel.Browsable(false)]
+        //[global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        //public EventsDataTable Events {
+        //    get {
+        //        return this.tableEvents;
+        //    }
+        //}
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -5798,15 +5798,7 @@ SELECT phoneID, contactNumber, contactID, notes FROM Phone WHERE (phoneID = @pho
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._eventsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Events.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._eventsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
+        
             if ((this._phoneTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Phone.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -5850,14 +5842,7 @@ SELECT phoneID, contactNumber, contactID, notes FROM Phone WHERE (phoneID = @pho
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._eventsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Events.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._eventsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
+          
             if ((this._phoneTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Phone.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -5884,14 +5869,7 @@ SELECT phoneID, contactNumber, contactID, notes FROM Phone WHERE (phoneID = @pho
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._eventsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Events.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._eventsTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
+
             if ((this._jobTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Job.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
