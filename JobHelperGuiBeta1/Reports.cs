@@ -17,6 +17,14 @@ namespace JobHelperGuiBeta1
             InitializeComponent();
         }
 
+        private void Reports_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'God.DataTable1' table. You can move, or remove it, as needed.
+            this.DataTable1TableAdapter.Fill(this.God.DataTable1);
+
+            this.reportViewer1.RefreshReport();
+        }
+
      
     }
 }

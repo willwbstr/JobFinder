@@ -61,6 +61,12 @@ namespace JobHelperGuiBeta1
 
         }
 
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reports rpt = new Reports();
+            rpt.Show();
+        }
+
     
     }
 

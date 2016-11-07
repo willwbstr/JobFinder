@@ -45,6 +45,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
+            this.reportToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
@@ -103,37 +105,37 @@
             // buisnessToolStripMenuItem
             // 
             this.buisnessToolStripMenuItem.Name = "buisnessToolStripMenuItem";
-            this.buisnessToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.buisnessToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.buisnessToolStripMenuItem.Text = "Business";
             // 
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.contactToolStripMenuItem.Text = "Contact";
             // 
             // dateToolStripMenuItem
             // 
             this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.dateToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.dateToolStripMenuItem.Text = "Date";
             // 
             // phoneToolStripMenuItem
             // 
             this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
-            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.phoneToolStripMenuItem.Text = "Phone";
             // 
             // eMailToolStripMenuItem
             // 
             this.eMailToolStripMenuItem.Name = "eMailToolStripMenuItem";
-            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.eMailToolStripMenuItem.Text = "E-Mail";
             // 
             // jobToolStripMenuItem
             // 
             this.jobToolStripMenuItem.Name = "jobToolStripMenuItem";
-            this.jobToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.jobToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.jobToolStripMenuItem.Text = "Job";
             // 
             // EventsToolStripMenuItem
@@ -147,7 +149,7 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // webBrowser1
@@ -159,6 +161,13 @@
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("http://www.indeed.com/jobs?q=C%23&l=Columbia%2C+SC", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // MainGui
             // 
@@ -199,6 +208,7 @@
         private System.Windows.Forms.ToolStripMenuItem phoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eMailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jobToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
     }
 }
 
