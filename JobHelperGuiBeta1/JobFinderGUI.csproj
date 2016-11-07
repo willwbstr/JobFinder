@@ -47,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JobFinderBU">
+      <HintPath>..\JobFinderBU\obj\Debug\JobFinderBU.dll</HintPath>
+    </Reference>
+    <Reference Include="JobFinderData">
+      <HintPath>..\JobFinderData\obj\Debug\JobFinderData.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />

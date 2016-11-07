@@ -38,7 +38,9 @@ namespace JobHelperGuiBeta1
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Closes program
+       
             this.Close();
+            
         }
 
         // Job Window //
