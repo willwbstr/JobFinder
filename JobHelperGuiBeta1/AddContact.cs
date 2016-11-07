@@ -12,6 +12,8 @@ namespace JobHelperGuiBeta1
 {
     public partial class AddContact : Form
     {
+        AddJob add4;
+        AddBusinessContactInfo add2; 
         public AddContact()
         {
             InitializeComponent();
@@ -36,7 +38,7 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the next form
             this.Hide();
-            AddJob add4 = new AddJob();
+            add4 = new AddJob();
             add4.Show();
         }
 
@@ -44,7 +46,7 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the previous 
             this.Hide();
-            AddBusinessContactInfo add2 = new AddBusinessContactInfo();
+            add2 = new AddBusinessContactInfo();
             add2.ShowDialog();
             this.Show();
         }

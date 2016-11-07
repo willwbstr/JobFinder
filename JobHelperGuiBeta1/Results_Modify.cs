@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace JobHelperGuiBeta1
+    
 {
     public partial class Results_Modify : Form
     {
-        
+        MainGui mg;
+      
+
         public Results_Modify()
         {
             InitializeComponent();
@@ -52,16 +55,9 @@ namespace JobHelperGuiBeta1
         {
             // Closes this form, loads the MainGui form, and clears all the old forms 
 
-            List<Form> openForms = new List<Form>();
-
-            foreach (Form f in Application.OpenForms)
-                openForms.Add(f);
-
-            foreach (Form f in openForms)
-            {
-                if (f.Name != "MainGui")
-                    f.Close();
-            }
+            this.Close();
+            mg = new MainGui();
+            mg.Show();
             
           
         }

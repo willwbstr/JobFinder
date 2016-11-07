@@ -13,6 +13,7 @@ namespace JobHelperGuiBeta1
     public partial class AddJob : Form
     {
         Results_Modify R_M;
+    
         AddContact add3;
         public AddJob()
         {

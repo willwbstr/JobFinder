@@ -97,11 +97,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>God.xsd</DependentUpon>
     </Compile>
-    <Compile Include="JobFinderDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JobFinderDataSet11.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MainGui.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,11 +108,6 @@
     </Compile>
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JobFinderDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JobFinderDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,28 +162,6 @@
     </None>
     <None Include="God.xss">
       <DependentUpon>God.xsd</DependentUpon>
-    </None>
-    <None Include="JobFinderDataSet.xsc">
-      <DependentUpon>JobFinderDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="JobFinderDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>JobFinderDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="JobFinderDataSet.xss">
-      <DependentUpon>JobFinderDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="JobFinderDataSet11.xsc">
-      <DependentUpon>JobFinderDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="JobFinderDataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>JobFinderDataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="JobFinderDataSet11.xss">
-      <DependentUpon>JobFinderDataSet11.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
