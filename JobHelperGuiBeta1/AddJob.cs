@@ -38,6 +38,7 @@ namespace JobHelperGuiBeta1
             this.Hide();
             R_M = new Results_Modify();
             R_M.Show();
+           
         }
 
         private void btnCancel4_Click(object sender, EventArgs e)
@@ -64,8 +65,8 @@ namespace JobHelperGuiBeta1
             // Hides this form and loads the previous 
             this.Hide();
             add3 = new AddContact();
-            add3.ShowDialog();
-            this.Show();
+            add3.Show();
+            
         }
 
     }

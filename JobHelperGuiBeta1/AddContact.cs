@@ -40,6 +40,7 @@ namespace JobHelperGuiBeta1
             this.Hide();
             add4 = new AddJob();
             add4.Show();
+          
         }
 
         private void btnPrevious3_Click(object sender, EventArgs e)
@@ -47,8 +48,7 @@ namespace JobHelperGuiBeta1
             // Hides this form and loads the previous 
             this.Hide();
             add2 = new AddBusinessContactInfo();
-            add2.ShowDialog();
-            this.Show();
+            add2.Show();
         }
 
         private void btnCancel3_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿/* Will Webster   *
  * Job Finder     *
- * AD Lab 6       *
+ *                *
  *****************/
 
 using System;

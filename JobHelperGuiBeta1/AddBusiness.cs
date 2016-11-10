@@ -13,23 +13,10 @@ namespace JobHelperGuiBeta1
     public partial class AddBusiness : Form
     {
         AddBusinessContactInfo add2;
-
+        AddBusiness add1;
         public AddBusiness()
         {
             InitializeComponent();
-        }
-
-        private void businessBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-         
-
-        }
-
-        private void AddNew1_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'jobFinderDataSet.Business' table. You can move, or remove it, as needed.
-         
         }
 
         private void btnNext1_Click(object sender, EventArgs e)
@@ -38,6 +25,7 @@ namespace JobHelperGuiBeta1
             this.Hide();
             add2 = new AddBusinessContactInfo();
             add2.Show();
+           
         }
 
         private void btnCancel1_Click(object sender, EventArgs e)

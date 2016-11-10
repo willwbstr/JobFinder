@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JobFinderBU;
 
 namespace JobHelperGuiBeta1
 {
@@ -39,8 +40,8 @@ namespace JobHelperGuiBeta1
             // Hides this form and loads the previous 
             this.Hide();
             add1 = new AddBusiness();
-            add1.ShowDialog();
-            this.Show();
+            add1.Show();
+           
         }
 
         private void btnNext2_Click(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace JobHelperGuiBeta1
             this.Hide();
             add3 = new AddContact();
             add3.Show();
+         
         }
 
         private void btnCancel2_Click(object sender, EventArgs e)
