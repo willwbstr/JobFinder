@@ -13,8 +13,8 @@ namespace JobHelperGuiBeta1
 {
     public partial class AddBusinessContactInfo : Form
     {
-        AddContact add3;
-        AddBusiness add1;
+        public static AddContact addContact;
+       
 
         public AddBusinessContactInfo()
         {
@@ -28,7 +28,8 @@ namespace JobHelperGuiBeta1
            
         }
 
-        private void AddNew2_Load(object sender, EventArgs e)
+        private void AddBusinessContactInfo_Load(object sender, EventArgs e)
+
         {
            
            
@@ -39,8 +40,8 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the previous 
             this.Hide();
-            add1 = new AddBusiness();
-            add1.Show();
+            MainGui.addBusiness.Show();
+           
            
         }
 
@@ -48,8 +49,8 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the next form
             this.Hide();
-            add3 = new AddContact();
-            add3.Show();
+            addContact = new AddContact();
+            addContact.Show();
          
         }
 

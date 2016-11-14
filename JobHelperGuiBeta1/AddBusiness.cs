@@ -12,8 +12,8 @@ namespace JobHelperGuiBeta1
 {
     public partial class AddBusiness : Form
     {
-        AddBusinessContactInfo add2;
-        AddBusiness add1;
+        public static AddBusinessContactInfo addBusinessContactInfo;
+      
         public AddBusiness()
         {
             InitializeComponent();
@@ -22,9 +22,10 @@ namespace JobHelperGuiBeta1
         private void btnNext1_Click(object sender, EventArgs e)
         {
             // Hides this form and loads the next form
+            //Buid the business object;
             this.Hide();
-            add2 = new AddBusinessContactInfo();
-            add2.Show();
+            addBusinessContactInfo = new AddBusinessContactInfo();
+            addBusinessContactInfo.Show();
            
         }
 
@@ -46,6 +47,11 @@ namespace JobHelperGuiBeta1
                     ClearAllText(c);
 
             }
+        }
+
+        private void AddBusiness_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

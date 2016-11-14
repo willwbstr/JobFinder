@@ -438,6 +438,8 @@
             this.txtMethodOfContact.Name = "txtMethodOfContact";
             this.txtMethodOfContact.Size = new System.Drawing.Size(160, 22);
             this.txtMethodOfContact.TabIndex = 34;
+            this.txtMethodOfContact.Text = " ";
+            this.txtMethodOfContact.TextChanged += new System.EventHandler(this.txtMethodOfContact_TextChanged);
             // 
             // emailTextBox
             // 

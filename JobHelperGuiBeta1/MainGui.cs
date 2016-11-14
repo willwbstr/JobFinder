@@ -17,6 +17,9 @@ namespace JobHelperGuiBeta1
 {
     public partial class MainGui : Form
     {
+        public static AddBusiness addBusiness;
+        public static MainGui mg;
+
         public MainGui()
         {
             InitializeComponent();
@@ -24,15 +27,15 @@ namespace JobHelperGuiBeta1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+          
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Displays the Add Form
             this.Hide();
-            AddBusiness add1 = new AddBusiness();
-            add1.Show();
+            addBusiness = new AddBusiness();
+            addBusiness.Show();
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)

@@ -12,11 +12,12 @@ namespace JobHelperGuiBeta1
 {
     public partial class AddContact : Form
     {
-        AddJob add4;
-        AddBusinessContactInfo add2; 
+        public static AddJob addJob;
+       
         public AddContact()
         {
             InitializeComponent();
+            this.cboMethodOfContact.Items.AddRange(new object[] { "Call", "Text", "Email" });
         }
 
         private void contactBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -38,8 +39,8 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the next form
             this.Hide();
-            add4 = new AddJob();
-            add4.Show();
+            addJob = new AddJob();
+            addJob.Show();
           
         }
 
@@ -47,8 +48,8 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the previous 
             this.Hide();
-            add2 = new AddBusinessContactInfo();
-            add2.Show();
+           
+            AddBusiness.addBusinessContactInfo.Show();
         }
 
         private void btnCancel3_Click(object sender, EventArgs e)
@@ -70,10 +71,11 @@ namespace JobHelperGuiBeta1
             }
         }
 
-        private void cboMethodOfContact_SelectedIndexChanged(object sender, EventArgs e)
+        public void cboMethodOfContact_SelectedIndexChanged(object sender, EventArgs e)
         {
             //cboMethodOfContact.SelectedValue = // methods listed for contact
-        
+
+           
         }
     }
 }

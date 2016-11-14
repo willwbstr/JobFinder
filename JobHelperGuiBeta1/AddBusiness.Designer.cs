@@ -189,7 +189,7 @@
             this.Controls.Add(this.businessNameTextBox);
             this.Name = "AddBusiness";
             this.Text = "Add Business";
-        
+            this.Load += new System.EventHandler(this.AddBusiness_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

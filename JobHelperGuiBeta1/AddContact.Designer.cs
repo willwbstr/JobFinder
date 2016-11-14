@@ -155,6 +155,7 @@
             // 
             // cboMethodOfContact
             // 
+            this.cboMethodOfContact.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMethodOfContact.FormattingEnabled = true;
             this.cboMethodOfContact.Location = new System.Drawing.Point(148, 98);
             this.cboMethodOfContact.Name = "cboMethodOfContact";
@@ -217,8 +218,8 @@
         private System.Windows.Forms.TextBox notesTextBox;
         private System.Windows.Forms.Button btnPrevious3;
         private System.Windows.Forms.Button btnNext3;
-        private System.Windows.Forms.ComboBox cboMethodOfContact;
         private System.Windows.Forms.TextBox txtcontactNumber;
         private System.Windows.Forms.Button btnCancel3;
+        protected internal System.Windows.Forms.ComboBox cboMethodOfContact;
     }
 }

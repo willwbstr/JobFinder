@@ -14,7 +14,7 @@ namespace JobHelperGuiBeta1
     {
         Results_Modify R_M;
     
-        AddContact add3;
+        AddContact addContact;
         public AddJob()
         {
             InitializeComponent();
@@ -64,8 +64,8 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the previous 
             this.Hide();
-            add3 = new AddContact();
-            add3.Show();
+            addContact = new AddContact();
+            addContact.Show();
             
         }
 

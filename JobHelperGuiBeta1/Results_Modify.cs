@@ -13,12 +13,13 @@ namespace JobHelperGuiBeta1
 {
     public partial class Results_Modify : Form
     {
-        MainGui mg;
+       
       
 
         public Results_Modify()
         {
             InitializeComponent();
+            //txtMethodOfContact.Text = this.Parent.Parent.cboMethodOfContact.Text.ToString();
         }
 
      
@@ -40,6 +41,7 @@ namespace JobHelperGuiBeta1
         private void btnSave_Click(object sender, EventArgs e)
         {
             // Takes everythinfg to read only and saves to the database
+
          
             this.dataGridView4.ReadOnly = true;
             this.txtBusinessID.ReadOnly = true;
@@ -49,6 +51,8 @@ namespace JobHelperGuiBeta1
             this.txtCity.ReadOnly = true;
             this.txtState.ReadOnly = true;
             this.txtZip.ReadOnly = true;
+
+            // TODO: Set all form refs to NULL!!!!!
         }
 
         private void btnReturn2Main_Click(object sender, EventArgs e)
@@ -56,8 +60,8 @@ namespace JobHelperGuiBeta1
             // Closes this form, loads the MainGui form, and clears all the old forms 
 
             this.Close();
-            mg = new MainGui();
-            mg.Show();
+         
+            MainGui.mg.Show();
             
           
         }
@@ -79,6 +83,11 @@ namespace JobHelperGuiBeta1
         }
 
         private void Results_Modify_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMethodOfContact_TextChanged(object sender, EventArgs e)
         {
 
         }
