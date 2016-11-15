@@ -19,7 +19,8 @@ namespace JobHelperGuiBeta1
     {
         public static AddBusiness addBusiness;
         public static MainGui mg;
-
+        public static string updateStatus;
+       
         public MainGui()
         {
             InitializeComponent();
@@ -54,17 +55,9 @@ namespace JobHelperGuiBeta1
 
         }
 
-        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        private void fileToolStripMenuItem_Click(object sender, ToolStripItemClickedEventArgs e)
         {
-            // Displays the Search form based on chosen filter
-            this.Hide();
-            Search search1 = new Search();
-            search1.Show();
-        }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,7 +66,21 @@ namespace JobHelperGuiBeta1
             rpt.Show();
         }
 
-    
+        public void buisnessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        public void searchToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            this.Hide();
+            Search search1 = new Search();
+            updateStatus = e.ClickedItem.Text;
+            search1.displayFormatText = MainGui.updateStatus;
+            search1.Show();
+          
+        }
+
     }
 
 }

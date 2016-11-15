@@ -12,15 +12,29 @@ using System.Windows.Forms;
 namespace JobHelperGuiBeta1
 {
     public partial class Search : Form
+
     {
+        // gets the selected Item from the previous form to display
+        public string displayFormatText
+        {
+            get
+            {
+               return txtDisplayFormat.Text;
+            }
+            set
+            {
+                txtDisplayFormat.Text = value;
+            }
+        }
         public Search()
         {
             InitializeComponent();
+            this.txtDisplayFormat.ReadOnly = true;
         }
 
         private void Search_Load(object sender, EventArgs e)
         {
-
+          
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -37,12 +51,29 @@ namespace JobHelperGuiBeta1
 
         private void txtDisplayFormat_TextChanged(object sender, EventArgs e)
         {
-            // Will display the format needed for the seach criteria chosen from the Main Gui form.
+
+          
+        
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             // Will change depending on the selection of the search criteria from the Main Gui
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            if (MainGui.mg == null)
+            {
+                MainGui.mg = new MainGui();
+                MainGui.mg.Show();
+            }
+            else
+            {
+                this.Refresh();
+                MainGui.mg.Show();
+            }
         }
 
 

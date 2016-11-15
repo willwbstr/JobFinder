@@ -32,14 +32,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtDisplayFormat = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(91, 39);
+            this.txtSearch.Location = new System.Drawing.Point(78, 39);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(220, 22);
+            this.txtSearch.Size = new System.Drawing.Size(238, 22);
             this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -53,7 +55,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(132, 84);
+            this.btnSearch.Location = new System.Drawing.Point(105, 83);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -63,13 +65,22 @@
             // 
             // txtDisplayFormat
             // 
-            this.txtDisplayFormat.Location = new System.Drawing.Point(104, 13);
+            this.txtDisplayFormat.Location = new System.Drawing.Point(106, 11);
             this.txtDisplayFormat.Name = "txtDisplayFormat";
             this.txtDisplayFormat.Size = new System.Drawing.Size(183, 22);
             this.txtDisplayFormat.TabIndex = 3;
-            this.txtDisplayFormat.Text = "Display Format Desired";
             this.txtDisplayFormat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDisplayFormat.TextChanged += new System.EventHandler(this.txtDisplayFormat_TextChanged);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(216, 83);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Search
             // 
@@ -78,6 +89,7 @@
             this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(328, 130);
             this.ControlBox = false;
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtDisplayFormat);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
@@ -98,5 +110,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtDisplayFormat;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

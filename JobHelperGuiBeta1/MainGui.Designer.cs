@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buisnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,6 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -72,19 +72,26 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.fileToolStripMenuItem.Text = "File";
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
+           
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.addToolStripMenuItem.Text = "Add New";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -100,42 +107,43 @@
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.searchToolStripMenuItem.Text = "Search";
-            this.searchToolStripMenuItem.Click += new System.EventHandler(this.searchToolStripMenuItem_Click);
+            this.searchToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.searchToolStripMenuItem_DropDownItemClicked);
             // 
             // buisnessToolStripMenuItem
             // 
             this.buisnessToolStripMenuItem.Name = "buisnessToolStripMenuItem";
-            this.buisnessToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.buisnessToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.buisnessToolStripMenuItem.Text = "Business";
+            this.buisnessToolStripMenuItem.Click += new System.EventHandler(this.buisnessToolStripMenuItem_Click);
             // 
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.contactToolStripMenuItem.Text = "Contact";
             // 
             // dateToolStripMenuItem
             // 
             this.dateToolStripMenuItem.Name = "dateToolStripMenuItem";
-            this.dateToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.dateToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.dateToolStripMenuItem.Text = "Date";
             // 
             // phoneToolStripMenuItem
             // 
             this.phoneToolStripMenuItem.Name = "phoneToolStripMenuItem";
-            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.phoneToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.phoneToolStripMenuItem.Text = "Phone";
             // 
             // eMailToolStripMenuItem
             // 
             this.eMailToolStripMenuItem.Name = "eMailToolStripMenuItem";
-            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.eMailToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.eMailToolStripMenuItem.Text = "E-Mail";
             // 
             // jobToolStripMenuItem
             // 
             this.jobToolStripMenuItem.Name = "jobToolStripMenuItem";
-            this.jobToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.jobToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.jobToolStripMenuItem.Text = "Job";
             // 
             // EventsToolStripMenuItem
@@ -161,13 +169,6 @@
             this.webBrowser1.TabIndex = 3;
             this.webBrowser1.Url = new System.Uri("http://www.indeed.com/jobs?q=C%23&l=Columbia%2C+SC", System.UriKind.Absolute);
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
-            // 
-            // reportToolStripMenuItem
-            // 
-            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.reportToolStripMenuItem.Text = "Report";
-            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // MainGui
             // 
@@ -198,7 +199,6 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buisnessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EventsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.WebBrowser webBrowser1;
@@ -209,6 +209,7 @@
         private System.Windows.Forms.ToolStripMenuItem eMailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jobToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        protected internal System.Windows.Forms.ToolStripMenuItem buisnessToolStripMenuItem;
     }
 }
 
