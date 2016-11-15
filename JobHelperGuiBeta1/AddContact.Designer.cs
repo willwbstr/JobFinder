@@ -161,7 +161,7 @@
             this.cboMethodOfContact.Name = "cboMethodOfContact";
             this.cboMethodOfContact.Size = new System.Drawing.Size(258, 24);
             this.cboMethodOfContact.TabIndex = 12;
-            this.cboMethodOfContact.SelectedIndexChanged += new System.EventHandler(this.cboMethodOfContact_SelectedIndexChanged);
+            //this.cboMethodOfContact.SelectedIndexChanged += new System.EventHandler(this.cboMethodOfContact_SelectedIndexChanged);
             // 
             // txtcontactNumber
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.txtContactLastName);
             this.Name = "AddContact";
             this.Text = "Add Contact";
-            this.Load += new System.EventHandler(this.AddNew3_Load);
+            this.Load += new System.EventHandler(this.AddContact_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

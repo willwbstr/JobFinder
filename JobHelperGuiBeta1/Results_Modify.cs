@@ -19,7 +19,33 @@ namespace JobHelperGuiBeta1
         public Results_Modify()
         {
             InitializeComponent();
-            //txtMethodOfContact.Text = this.Parent.Parent.cboMethodOfContact.Text.ToString();
+            txtMethodOfContact.Text = AddBusinessContactInfo.addContact.cboMethodOfContact.Text.ToString();
+
+
+            // Sets Text Boxes to Read only
+
+            this.dataGridView4.ReadOnly = true;
+            this.txtBusinessID.ReadOnly = true;
+            this.txtBusinessName.ReadOnly = true;
+            this.txtAddress.ReadOnly = true;
+            this.txtAddress2.ReadOnly = true;
+            this.txtCity.ReadOnly = true;
+            this.txtState.ReadOnly = true;
+            this.txtZip.ReadOnly = true;
+            this.txtBusinessPhone.ReadOnly = true;
+            this.txtFax.ReadOnly = true;
+            this.txtEmail.ReadOnly = true;
+            this.txtWebsite.ReadOnly = true;
+            this.txtContactFirstName.ReadOnly = true;
+            this.txtContactLastName.ReadOnly = true;
+            this.txtContactNumber.ReadOnly = true;
+            this.txtMethodOfContact.ReadOnly = true;
+            this.txtJob.ReadOnly = true;
+            this.txtSourceOfJob.ReadOnly = true;
+            this.txtSalary.ReadOnly = true;
+            this.txtStatus.ReadOnly = true;
+            this.txtNotes.ReadOnly = true;
+
         }
 
      
@@ -35,6 +61,19 @@ namespace JobHelperGuiBeta1
             this.txtCity.ReadOnly = false;
             this.txtState.ReadOnly = false;
             this.txtZip.ReadOnly = false;
+            this.txtBusinessPhone.ReadOnly = false;
+            this.txtFax.ReadOnly = false;
+            this.txtEmail.ReadOnly = false;
+            this.txtWebsite.ReadOnly = false;
+            this.txtContactFirstName.ReadOnly = false;
+            this.txtContactLastName.ReadOnly = false;
+            this.txtContactNumber.ReadOnly = false;
+            this.txtMethodOfContact.ReadOnly = false;
+            this.txtJob.ReadOnly = false;
+            this.txtSourceOfJob.ReadOnly = false;
+            this.txtSalary.ReadOnly = false;
+            this.txtStatus.ReadOnly = false;
+            this.txtNotes.ReadOnly = false;
 
         }
 
@@ -51,6 +90,20 @@ namespace JobHelperGuiBeta1
             this.txtCity.ReadOnly = true;
             this.txtState.ReadOnly = true;
             this.txtZip.ReadOnly = true;
+            this.txtBusinessPhone.ReadOnly = true;
+            this.txtFax.ReadOnly = true;
+            this.txtEmail.ReadOnly = true;
+            this.txtWebsite.ReadOnly = true;
+            this.txtContactFirstName.ReadOnly = true;
+            this.txtContactLastName.ReadOnly = true;
+            this.txtContactNumber.ReadOnly = true;
+            this.txtMethodOfContact.ReadOnly = true;
+            this.txtJob.ReadOnly = true;
+            this.txtSourceOfJob.ReadOnly = true;
+            this.txtSalary.ReadOnly = true;
+            this.txtStatus.ReadOnly = true;
+            this.txtNotes.ReadOnly = true;
+
 
             // TODO: Set all form refs to NULL!!!!!
         }
@@ -59,9 +112,18 @@ namespace JobHelperGuiBeta1
         {
             // Closes this form, loads the MainGui form, and clears all the old forms 
 
-            this.Close();
-         
-            MainGui.mg.Show();
+            
+                 this.Close();
+                 if (MainGui.mg == null)
+                 {
+                     MainGui.mg = new MainGui();
+                     MainGui.mg.Show();
+                 }
+                 else
+                 {
+                     this.Refresh();
+                     MainGui.mg.Show();
+                 }
             
           
         }

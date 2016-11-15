@@ -12,9 +12,9 @@ namespace JobHelperGuiBeta1
 {
     public partial class AddJob : Form
     {
-        Results_Modify R_M;
+        public static Results_Modify results_Modify;
     
-        AddContact addContact;
+       
         public AddJob()
         {
             InitializeComponent();
@@ -34,10 +34,19 @@ namespace JobHelperGuiBeta1
 
         private void btnNext4_Click(object sender, EventArgs e)
         {
+             results_Modify = new Results_Modify();
             // Hides this form and loads the Results_Modify form
             this.Hide();
-            R_M = new Results_Modify();
-            R_M.Show();
+            if (results_Modify == null)
+            {
+                results_Modify = new Results_Modify();
+                results_Modify.Show();
+            }
+            else
+            {
+                this.Refresh();
+                results_Modify.Show();
+            }
            
         }
 
@@ -64,8 +73,8 @@ namespace JobHelperGuiBeta1
         {
             // Hides this form and loads the previous 
             this.Hide();
-            addContact = new AddContact();
-            addContact.Show();
+            
+            AddBusinessContactInfo.addContact.Show();
             
         }
 

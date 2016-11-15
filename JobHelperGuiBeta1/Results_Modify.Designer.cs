@@ -63,7 +63,7 @@
             this.txtContactFirstName = new System.Windows.Forms.TextBox();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
             this.lblContact = new System.Windows.Forms.Label();
-            this.businessPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.txtBusinessPhone = new System.Windows.Forms.TextBox();
             this.txtFax = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtWebsite = new System.Windows.Forms.TextBox();
@@ -73,7 +73,7 @@
             this.txtSourceOfJob = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
-            this.notesTextBox = new System.Windows.Forms.TextBox();
+            this.txtNotes = new System.Windows.Forms.TextBox();
             businessIDLabel = new System.Windows.Forms.Label();
             businessNameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
@@ -403,12 +403,12 @@
             this.lblContact.TabIndex = 26;
             this.lblContact.Text = "Contact Number";
             // 
-            // businessPhoneTextBox
+            // txtBusinessPhone
             // 
-            this.businessPhoneTextBox.Location = new System.Drawing.Point(121, 131);
-            this.businessPhoneTextBox.Name = "businessPhoneTextBox";
-            this.businessPhoneTextBox.Size = new System.Drawing.Size(109, 22);
-            this.businessPhoneTextBox.TabIndex = 28;
+            this.txtBusinessPhone.Location = new System.Drawing.Point(121, 131);
+            this.txtBusinessPhone.Name = "txtBusinessPhone";
+            this.txtBusinessPhone.Size = new System.Drawing.Size(109, 22);
+            this.txtBusinessPhone.TabIndex = 28;
             // 
             // txtFax
             // 
@@ -476,12 +476,12 @@
             this.txtStatus.Size = new System.Drawing.Size(161, 22);
             this.txtStatus.TabIndex = 44;
             // 
-            // notesTextBox
+            // txtNotes
             // 
-            this.notesTextBox.Location = new System.Drawing.Point(177, 410);
-            this.notesTextBox.Name = "notesTextBox";
-            this.notesTextBox.Size = new System.Drawing.Size(595, 22);
-            this.notesTextBox.TabIndex = 46;
+            this.txtNotes.Location = new System.Drawing.Point(177, 410);
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(595, 22);
+            this.txtNotes.TabIndex = 46;
             // 
             // Results_Modify
             // 
@@ -492,7 +492,7 @@
             this.ClientSize = new System.Drawing.Size(853, 570);
             this.ControlBox = false;
             this.Controls.Add(lblNotes);
-            this.Controls.Add(this.notesTextBox);
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(lblStatus);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(lblSalary);
@@ -512,7 +512,7 @@
             this.Controls.Add(lblFax);
             this.Controls.Add(this.txtFax);
             this.Controls.Add(lblBusinessPhone);
-            this.Controls.Add(this.businessPhoneTextBox);
+            this.Controls.Add(this.txtBusinessPhone);
             this.Controls.Add(this.lblContact);
             this.Controls.Add(this.txtContactNumber);
             this.Controls.Add(lblContactFirstName);
@@ -563,7 +563,7 @@
         private System.Windows.Forms.TextBox txtContactFirstName;
         private System.Windows.Forms.TextBox txtContactNumber;
         private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.TextBox businessPhoneTextBox;
+        private System.Windows.Forms.TextBox txtBusinessPhone;
         private System.Windows.Forms.TextBox txtFax;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtWebsite;
@@ -573,6 +573,6 @@
         private System.Windows.Forms.TextBox txtSourceOfJob;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.TextBox notesTextBox;
+        private System.Windows.Forms.TextBox txtNotes;
     }
 }

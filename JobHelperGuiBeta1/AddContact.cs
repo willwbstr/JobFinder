@@ -26,21 +26,27 @@ namespace JobHelperGuiBeta1
 
         }
 
-        private void AddNew3_Load(object sender, EventArgs e)
+        private void AddContact_Load(object sender, EventArgs e)
         {
-            //// TODO: This line of code loads data into the 'jobFinderDataSet.Phone' table. You can move, or remove it, as needed.
-            //this.phoneTableAdapter.Fill(this.jobFinderDataSet.Phone);
-            //// TODO: This line of code loads data into the 'jobFinderDataSet.Contact' table. You can move, or remove it, as needed.
-            //this.contactTableAdapter.Fill(this.jobFinderDataSet.Contact);
+          
 
         }
 
         private void btnNext3_Click(object sender, EventArgs e)
         {
+            addJob = new AddJob();
             // Hides this form and loads the next form
             this.Hide();
-            addJob = new AddJob();
-            addJob.Show();
+            if (addJob == null)
+            {
+                addJob = new AddJob();
+                addJob.Show();
+            }
+            else
+            {
+                this.Refresh();
+                addJob.Show();
+            }
           
         }
 
@@ -71,7 +77,7 @@ namespace JobHelperGuiBeta1
             }
         }
 
-        public void cboMethodOfContact_SelectedIndexChanged(object sender, EventArgs e)
+        public static void cboMethodOfContact_SelectedIndexChanged(object sender, EventArgs e)
         {
             //cboMethodOfContact.SelectedValue = // methods listed for contact
 

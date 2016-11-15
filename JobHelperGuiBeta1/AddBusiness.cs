@@ -21,11 +21,19 @@ namespace JobHelperGuiBeta1
 
         private void btnNext1_Click(object sender, EventArgs e)
         {
+            addBusinessContactInfo = new AddBusinessContactInfo();
             // Hides this form and loads the next form
-            //Buid the business object;
+            //Build the business object;
             this.Hide();
+            if (addBusinessContactInfo == null)
+            {
             addBusinessContactInfo = new AddBusinessContactInfo();
             addBusinessContactInfo.Show();
+            }
+            else 
+            {
+                addBusinessContactInfo.Show();
+            }
            
         }
 

@@ -47,11 +47,18 @@ namespace JobHelperGuiBeta1
 
         private void btnNext2_Click(object sender, EventArgs e)
         {
+            addContact = new AddContact();
             // Hides this form and loads the next form
             this.Hide();
-            addContact = new AddContact();
-            addContact.Show();
-         
+            if (addContact == null)
+            {
+                addContact = new AddContact();
+                addContact.ShowDialog();
+            }
+            else
+            {
+                addContact.ShowDialog();
+            }
         }
 
         private void btnCancel2_Click(object sender, EventArgs e)
@@ -70,6 +77,11 @@ namespace JobHelperGuiBeta1
                 else
                     ClearAllText(c);
             }
+        }
+
+        private void AddBusinessContactInfo_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

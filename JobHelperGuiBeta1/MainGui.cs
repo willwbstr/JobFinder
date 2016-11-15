@@ -36,6 +36,7 @@ namespace JobHelperGuiBeta1
             this.Hide();
             addBusiness = new AddBusiness();
             addBusiness.Show();
+
         }
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)

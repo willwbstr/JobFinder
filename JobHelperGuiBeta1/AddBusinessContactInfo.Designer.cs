@@ -180,7 +180,7 @@
             this.Controls.Add(this.faxTextBox);
             this.Name = "AddBusinessContactInfo";
             this.Text = "Add Business Contact Info";
-            //this.Load += new System.EventHandler(this.AddNew2_Load);
+            this.Load += new System.EventHandler(this.AddBusinessContactInfo_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
