@@ -17,6 +17,7 @@ namespace JobFinderGuiBeta1
     {
        
       List<Business> businessList;
+     
 
         public Results_Modify()
         {
@@ -149,7 +150,27 @@ namespace JobFinderGuiBeta1
         private void Results_Modify_Load(object sender, EventArgs e)
         {
             businessList = BusinessDB.GetAll(" ");
-            txtAddress.Text = businessList[0].ToString();
+            txtBusinessID.Text = businessList[0].BusinessID.ToString();
+            txtBusinessName.Text = businessList[0].BusinessName.ToString();
+            txtAddress.Text = businessList[0].Address.ToString();
+            txtAddress2.Text = businessList[0].Address2.ToString();
+            txtCity.Text = businessList[0].City.ToString();
+            txtState.Text = businessList[0].State.ToString();
+            txtZip.Text = businessList[0].State.ToString();
+            txtFax.Text = businessList[0].State.ToString();
+            txtEmail.Text = businessList[0].State.ToString();
+            txtWebsite.Text = businessList[0].State.ToString();
+            txtContactFirstName.Text = businessList[0].ToString();
+            txtContactLastName.Text = businessList[0].ToString();
+            txtMethodOfContact.Text = businessList[0].ToString();
+            txtContactEmail.Text = businessList[0].ToString();
+            txtContactNumber.Text = businessList[0].ToString();
+            txtJob.Text = businessList[0].ToString();
+            txtSourceOfJob.Text = businessList.ToString();
+            txtSalary.Text = businessList.ToString();
+            txtStatus.Text = businessList.ToString();
+            txtNotes.Text = businessList.ToString();
+
         }
 
         private void txtMethodOfContact_TextChanged(object sender, EventArgs e)

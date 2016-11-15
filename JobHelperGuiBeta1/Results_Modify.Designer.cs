@@ -68,7 +68,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtWebsite = new System.Windows.Forms.TextBox();
             this.txtMethodOfContact = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.txtContactEmail = new System.Windows.Forms.TextBox();
             this.txtJob = new System.Windows.Forms.TextBox();
             this.txtSourceOfJob = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
@@ -441,12 +441,12 @@
             this.txtMethodOfContact.Text = " ";
             this.txtMethodOfContact.TextChanged += new System.EventHandler(this.txtMethodOfContact_TextChanged);
             // 
-            // emailTextBox
+            // txtContactEmail
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(560, 261);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(190, 22);
-            this.emailTextBox.TabIndex = 36;
+            this.txtContactEmail.Location = new System.Drawing.Point(560, 261);
+            this.txtContactEmail.Name = "txtContactEmail";
+            this.txtContactEmail.Size = new System.Drawing.Size(190, 22);
+            this.txtContactEmail.TabIndex = 36;
             // 
             // txtJob
             // 
@@ -502,7 +502,7 @@
             this.Controls.Add(lblJob);
             this.Controls.Add(this.txtJob);
             this.Controls.Add(emailLabel);
-            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.txtContactEmail);
             this.Controls.Add(lblMethodOfContact);
             this.Controls.Add(this.txtMethodOfContact);
             this.Controls.Add(lblWebsite);
@@ -568,7 +568,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtWebsite;
         private System.Windows.Forms.TextBox txtMethodOfContact;
-        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox txtContactEmail;
         private System.Windows.Forms.TextBox txtJob;
         private System.Windows.Forms.TextBox txtSourceOfJob;
         private System.Windows.Forms.TextBox txtSalary;
