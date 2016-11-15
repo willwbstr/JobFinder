@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JobFinderData;
+using JobFinderBU;
 
-namespace JobHelperGuiBeta1
+namespace JobFinderGuiBeta1
     
 {
     public partial class Results_Modify : Form
@@ -19,7 +21,7 @@ namespace JobHelperGuiBeta1
         public Results_Modify()
         {
             InitializeComponent();
-            txtMethodOfContact.Text = AddBusinessContactInfo.addContact.cboMethodOfContact.Text.ToString();
+            //txtMethodOfContact.Text = AddBusinessContactInfo.addContact.cboMethodOfContact.Text.ToString();
 
 
             // Sets Text Boxes to Read only
@@ -146,6 +148,7 @@ namespace JobHelperGuiBeta1
 
         private void Results_Modify_Load(object sender, EventArgs e)
         {
+            BusinessDB.GetAll(" ");
 
         }
 

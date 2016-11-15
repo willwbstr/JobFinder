@@ -1,4 +1,4 @@
-﻿namespace JobHelperGuiBeta1
+﻿namespace JobFinderGuiBeta1
 {
     partial class MainGui
     {

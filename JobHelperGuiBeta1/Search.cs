@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JobFinderData;
+using JobFinderBU;
 
 
-namespace JobHelperGuiBeta1
+namespace JobFinderGuiBeta1
 {
     public partial class Search : Form
 
@@ -39,12 +41,24 @@ namespace JobHelperGuiBeta1
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            // Search by already presented field and Display Results_Modify Form
-           //List<Field> searchToolStripMenuItem.MainGui =
-           //    searchToolStripMenuItem.MainGui.FindAll(FieldAccessException => Field.Filter == selectedField.Filter);
-           // Results_Modify R_M = new Results_Modify();
-           // R_M.Show();
-           // this.Close();
+            string searchby = "WHERE ";
+            if (txtDisplayFormat.Text == "Business") searchby = searchby + "businessName LIKE " + "";
+
+            if (txtDisplayFormat.Text == "Contact") searchby = searchby + "contactLastName LIKE " + "";
+
+            if (txtDisplayFormat.Text == "Date") searchby = searchby + "date_time LIKE " + "";
+
+            if (txtDisplayFormat.Text == "Phone") searchby = searchby + "contactNumber LIKE " + "";
+
+            if (txtDisplayFormat.Text == "E-Mail") searchby = searchby + "email LIKE " + "";
+
+            if (txtDisplayFormat.Text == "Job") searchby = searchby + "job LIKE " + "";
+
+            searchby = searchby + txtDisplayFormat + "%";
+          
+            Results_Modify R_M = new Results_Modify();
+            R_M.Show();
+            this.Close();
 
 
         }
@@ -74,6 +88,11 @@ namespace JobHelperGuiBeta1
                 this.Refresh();
                 MainGui.mg.Show();
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+           
         }
 
 

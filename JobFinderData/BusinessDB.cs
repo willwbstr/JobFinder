@@ -8,16 +8,17 @@ using JobFinderBU;
 
 namespace JobFinderData
 {
-    class BusinessDB
+    public class BusinessDB
     {
-        public static List<Business> GetAll()
+        public static List<Business> GetAll(string searchby)
         {
             List<Business> businessList = new List<Business>();
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
                 "SELECT businessID, businessName, address, address2, city, state, zip, fax, businessPhone, email, website, notes " +
                 "FROM Business";
-            SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
+            SqlCommand selectCommand = new SqlCommand(selectStatement + searchby, connection);
+
             try
             {
                 connection.Open();

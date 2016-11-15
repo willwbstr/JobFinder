@@ -1,4 +1,4 @@
-﻿namespace JobHelperGuiBeta1
+﻿namespace JobFinderGuiBeta1
 {
     partial class Reports
     {
@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.God = new JobHelperGuiBeta1.God();
+            this.God = new JobFinderGuiBeta1.God();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataTable1TableAdapter = new JobHelperGuiBeta1.GodTableAdapters.DataTable1TableAdapter();
+            this.DataTable1TableAdapter = new JobFinderGuiBeta1.GodTableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.God)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             this.SuspendLayout();

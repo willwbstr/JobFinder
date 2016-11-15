@@ -1,4 +1,4 @@
-﻿namespace JobHelperGuiBeta1
+﻿namespace JobFinderGuiBeta1
 {
     partial class Search
     {
@@ -42,6 +42,7 @@
             this.txtSearch.Size = new System.Drawing.Size(238, 22);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label1
             // 
@@ -86,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
+            this.BackgroundImage = global::JobFinderGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(328, 130);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);

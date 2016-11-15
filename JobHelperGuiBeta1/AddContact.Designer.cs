@@ -1,4 +1,4 @@
-﻿namespace JobHelperGuiBeta1
+﻿namespace JobFinderGuiBeta1
 {
     partial class AddContact
     {
@@ -184,7 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::JobHelperGuiBeta1.Properties.Resources.JobFinder1;
+            this.BackgroundImage = global::JobFinderGuiBeta1.Properties.Resources.JobFinder1;
             this.ClientSize = new System.Drawing.Size(442, 306);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel3);

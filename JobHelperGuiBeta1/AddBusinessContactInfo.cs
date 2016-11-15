@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JobFinderBU;
 
-namespace JobHelperGuiBeta1
+namespace JobFinderGuiBeta1
 {
     public partial class AddBusinessContactInfo : Form
     {

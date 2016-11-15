@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace JobHelperGuiBeta1 {
+namespace JobFinderGuiBeta1 {
     
     
     /// <summary>
@@ -1477,7 +1477,7 @@ namespace JobHelperGuiBeta1 {
         }
     }
 }
-namespace JobHelperGuiBeta1.GodTableAdapters {
+namespace JobFinderGuiBeta1.GodTableAdapters {
     
     
     /// <summary>
@@ -1629,7 +1629,7 @@ namespace JobHelperGuiBeta1.GodTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::JobHelperGuiBeta1.Properties.Settings.Default.JobFinderConnectionString;
+            this._connection.ConnectionString = global::JobFinderGuiBeta1.Properties.Settings.Default.JobFinderConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

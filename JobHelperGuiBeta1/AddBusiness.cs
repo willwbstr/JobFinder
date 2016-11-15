@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace JobHelperGuiBeta1
+namespace JobFinderGuiBeta1
 {
     public partial class AddBusiness : Form
     {
