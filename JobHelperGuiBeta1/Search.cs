@@ -42,19 +42,19 @@ namespace JobFinderGuiBeta1
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string searchby = "WHERE ";
-            if (txtDisplayFormat.Text == "Business") searchby = searchby + "businessName LIKE " + "";
+            if (txtDisplayFormat.Text == "Business") searchby = searchby + "businessName = " + "";
 
-            if (txtDisplayFormat.Text == "Contact") searchby = searchby + "contactLastName LIKE " + "";
+            if (txtDisplayFormat.Text == "Contact") searchby = searchby + "contactLastName = " + "";
 
-            if (txtDisplayFormat.Text == "Date") searchby = searchby + "date_time LIKE " + "";
+            if (txtDisplayFormat.Text == "Date") searchby = searchby + "date_time = " + "";
 
-            if (txtDisplayFormat.Text == "Phone") searchby = searchby + "contactNumber LIKE " + "";
+            if (txtDisplayFormat.Text == "Phone") searchby = searchby + "contactNumber = " + "";
 
-            if (txtDisplayFormat.Text == "E-Mail") searchby = searchby + "email LIKE " + "";
+            if (txtDisplayFormat.Text == "E-Mail") searchby = searchby + "email = " + "";
 
-            if (txtDisplayFormat.Text == "Job") searchby = searchby + "job LIKE " + "";
+            if (txtDisplayFormat.Text == "Job") searchby = searchby + "job = " + "";
 
-            searchby = searchby + txtDisplayFormat + "%";
+            searchby = searchby + txtDisplayFormat + "";
           
             Results_Modify R_M = new Results_Modify();
             R_M.Show();

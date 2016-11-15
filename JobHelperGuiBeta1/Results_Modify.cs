@@ -16,7 +16,7 @@ namespace JobFinderGuiBeta1
     public partial class Results_Modify : Form
     {
        
-      
+      List<Business> businessList;
 
         public Results_Modify()
         {
@@ -132,7 +132,7 @@ namespace JobFinderGuiBeta1
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
         {
-
+          
         }
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
@@ -148,8 +148,8 @@ namespace JobFinderGuiBeta1
 
         private void Results_Modify_Load(object sender, EventArgs e)
         {
-            BusinessDB.GetAll(" ");
-
+            businessList = BusinessDB.GetAll(" ");
+            txtAddress.Text = businessList[0].ToString();
         }
 
         private void txtMethodOfContact_TextChanged(object sender, EventArgs e)
