@@ -9,7 +9,7 @@ namespace JobFinderBU
     public class Job
     {
         private int jobID;
-        private string jobs;
+        private string jobDescrption;
         private string sourceOfJob;
         private decimal salary;
         private string status;
@@ -19,6 +19,8 @@ namespace JobFinderBU
         public Job()
         { 
         }
+
+
 
         public int JobID
 {
@@ -32,15 +34,15 @@ namespace JobFinderBU
 	}
 }
 
-        public string Jobs 
+        public string JobDescription 
 {
 	get
 	{
-		return jobs;
+		return jobDescrption;
 	}
 	set
 	{
-		jobs = value;
+		jobDescrption = value;
 	}
 }
 

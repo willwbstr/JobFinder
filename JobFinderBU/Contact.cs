@@ -12,7 +12,7 @@ namespace JobFinderBU
         private string contactLastName;
         private string contactFirstName;
         private int businessID;
-        private string email;
+        private string contactEmail;
         private string methodOfContact;
         private string notes;
 
@@ -80,15 +80,15 @@ namespace JobFinderBU
             }
         }
 
-        public string Email
+        public string ContactEmail
         {
             get
             {
-                return email;
+                return contactEmail;
             }
             set
             {
-                email = value;
+                contactEmail = value;
             }
         }
 

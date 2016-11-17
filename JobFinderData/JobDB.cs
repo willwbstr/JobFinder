@@ -8,16 +8,17 @@ using JobFinderBU;
 
 namespace JobFinderData
 {
-    public static class JobDB
+    public class JobDB
     {
-        public static List<Job> GetAll()
+        public static List<Job> GetAll(string searchby)
         {
             List<Job> jobList = new List<Job>();
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
-                "SELECT jobID, jobs, sourceOfJob, salary, status, notes, contactID" +
-                "FROM Job";
-            SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
+                "SELECT jobID, jobDescription, sourceOfJob, salary, status, notes, contactID " +
+                "FROM Job ";
+            SqlCommand selectCommand = new SqlCommand(selectStatement + searchby, connection);
+            
             try
             {
                 connection.Open();
@@ -26,7 +27,7 @@ namespace JobFinderData
                 {
                     Job job = new Job();
                     job.JobID = (int)reader["jobID"];
-                    job.Jobs = (string)reader["jobs"];
+                    job.JobDescription = (string)reader["jobDescription"];
                     job.SourceOfJob = (string)reader["sourceOfJob"];
                     job.Salary = (decimal)reader["salary"];
                     job.Status = (string)reader["status"];

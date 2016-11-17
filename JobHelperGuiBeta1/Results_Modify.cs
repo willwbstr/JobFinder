@@ -16,8 +16,10 @@ namespace JobFinderGuiBeta1
     public partial class Results_Modify : Form
     {
        
-      List<Business> businessList;
-     
+        List<Business> businessList;
+        List<Contact> contactList;
+        List<Job> jobList;
+        List<Phone> phoneList;
 
         public Results_Modify()
         {
@@ -149,27 +151,31 @@ namespace JobFinderGuiBeta1
 
         private void Results_Modify_Load(object sender, EventArgs e)
         {
-            businessList = BusinessDB.GetAll(" ");
+            //businessList = BusinessDB.GetAll(" ");
+            //contactList = ContactDB.GetAll(" ");
+            jobList = JobDB.GetAll(" ");
+            //phoneList = PhoneDB.GetAll(" ");
+
             txtBusinessID.Text = businessList[0].BusinessID.ToString();
             txtBusinessName.Text = businessList[0].BusinessName.ToString();
             txtAddress.Text = businessList[0].Address.ToString();
             txtAddress2.Text = businessList[0].Address2.ToString();
             txtCity.Text = businessList[0].City.ToString();
             txtState.Text = businessList[0].State.ToString();
-            txtZip.Text = businessList[0].State.ToString();
-            txtFax.Text = businessList[0].State.ToString();
-            txtEmail.Text = businessList[0].State.ToString();
-            txtWebsite.Text = businessList[0].State.ToString();
-            txtContactFirstName.Text = businessList[0].ToString();
-            txtContactLastName.Text = businessList[0].ToString();
-            txtMethodOfContact.Text = businessList[0].ToString();
-            txtContactEmail.Text = businessList[0].ToString();
-            txtContactNumber.Text = businessList[0].ToString();
-            txtJob.Text = businessList[0].ToString();
-            txtSourceOfJob.Text = businessList.ToString();
-            txtSalary.Text = businessList.ToString();
-            txtStatus.Text = businessList.ToString();
-            txtNotes.Text = businessList.ToString();
+            txtZip.Text = businessList[0].Zip.ToString();
+            txtFax.Text = businessList[0].Fax.ToString();
+            txtEmail.Text = businessList[0].Email.ToString();
+            txtWebsite.Text = businessList[0].Website.ToString();
+            txtContactFirstName.Text = contactList[0].ContactFirstName.ToString();
+            txtContactLastName.Text = contactList[0].ContactLastName.ToString();
+            txtMethodOfContact.Text = contactList[0].MethodOfContact.ToString();
+            txtContactEmail.Text = contactList[0].ContactEmail.ToString();
+            txtContactNumber.Text = phoneList[0].ContactNumber.ToString();
+            txtJob.Text = jobList[0].JobDescription.ToString();
+            txtSourceOfJob.Text = jobList[0].SourceOfJob.ToString();
+            txtSalary.Text = jobList[0].Salary.ToString();
+            txtStatus.Text = jobList[0].Status.ToString();
+            txtNotes.Text = jobList[0].Notes.ToString();
 
         }
 

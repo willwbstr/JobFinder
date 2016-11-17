@@ -10,14 +10,14 @@ namespace JobFinderData
 {
     public static class PhoneDB
     {
-        public static List<Phone> GetAll()
+        public static List<Phone> GetAll(string searchby)
         {
             List<Phone> phoneList = new List<Phone>();
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
                 "SELECT phoneID, , contactNumber, contactID, notes " +
                 "FROM Phone";
-            SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
+            SqlCommand selectCommand = new SqlCommand(selectStatement + searchby, connection);
             try
             {
                 connection.Open();

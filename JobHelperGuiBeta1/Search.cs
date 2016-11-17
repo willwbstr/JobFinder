@@ -55,7 +55,7 @@ namespace JobFinderGuiBeta1
             if (txtDisplayFormat.Text == "Job") searchby = searchby + "job = " + "";
 
             searchby = searchby + txtDisplayFormat + "";
-          
+
             Results_Modify R_M = new Results_Modify();
             R_M.Show();
             this.Close();
