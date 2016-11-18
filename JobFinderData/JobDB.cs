@@ -29,10 +29,12 @@ namespace JobFinderData
                     job.JobID = (int)reader["jobID"];
                     job.JobDescription = (string)reader["jobDescription"];
                     job.SourceOfJob = (string)reader["sourceOfJob"];
-                    job.Salary = (decimal)reader["salary"];
+                    try { job.Salary = decimal.Parse(reader["salary"].ToString()); }
+                    catch { job.Salary = 0M; }
                     job.Status = (string)reader["status"];
                     job.ContactID = (int)reader["contactID"];
-                    job.Notes = (string)reader["notes"];
+                    try { job.Notes = (string) reader["notes"].ToString(); }
+                    catch { job.Notes = "Notes Are Blank"; }
                     jobList.Add(job);
 
                 }

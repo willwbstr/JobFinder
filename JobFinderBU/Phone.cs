@@ -10,7 +10,7 @@ namespace JobFinderBU
 
     {
         private int phoneID;
-        private string contactNumber;
+        private string contactNumber = "";
         private string notes;
         private int contactID;
 

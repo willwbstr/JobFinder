@@ -15,8 +15,8 @@ namespace JobFinderData
             List<Phone> phoneList = new List<Phone>();
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
-                "SELECT phoneID, , contactNumber, contactID, notes " +
-                "FROM Phone";
+                "SELECT phoneID, contactNumber, contactID, notes " +
+                "FROM Phone ";
             SqlCommand selectCommand = new SqlCommand(selectStatement + searchby, connection);
             try
             {
@@ -26,9 +26,11 @@ namespace JobFinderData
                 {
                     Phone phone = new Phone();
                     phone.PhoneID = (int)reader["phoneID"];
-                    phone.ContactNumber = (string)reader["contactnumber"];
-                    phone.Notes = (string)reader["notes"];
-                    phone.ContactID = (int)reader["ContactID"];
+                    try { phone.ContactNumber = reader["contactNumber"].ToString(); }
+                    catch { phone.ContactNumber = "No Number"; }
+                    try { phone.Notes = (string)reader["notes"].ToString(); }
+                    catch { phone.Notes = "Notes Are Blank"; }
+                    phone.ContactID = (int)reader["contactID"];
                  
                     phoneList.Add(phone);
 

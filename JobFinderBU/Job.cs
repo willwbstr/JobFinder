@@ -11,7 +11,7 @@ namespace JobFinderBU
         private int jobID;
         private string jobDescrption;
         private string sourceOfJob;
-        private decimal salary;
+        private decimal salary = 0M;
         private string status;
         private int contactID;
         private string notes;

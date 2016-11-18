@@ -151,10 +151,10 @@ namespace JobFinderGuiBeta1
 
         private void Results_Modify_Load(object sender, EventArgs e)
         {
-            //businessList = BusinessDB.GetAll(" ");
-            //contactList = ContactDB.GetAll(" ");
+            businessList = BusinessDB.GetAll(" ");
+            contactList = ContactDB.GetAll(" ");
             jobList = JobDB.GetAll(" ");
-            //phoneList = PhoneDB.GetAll(" ");
+            phoneList = PhoneDB.GetAll(" ");
 
             txtBusinessID.Text = businessList[0].BusinessID.ToString();
             txtBusinessName.Text = businessList[0].BusinessName.ToString();
