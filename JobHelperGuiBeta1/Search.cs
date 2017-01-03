@@ -46,13 +46,6 @@ namespace JobFinderGuiBeta1
 
             if (txtDisplayFormat.Text == "Contact") searchby = searchby + "contactLastName = " + "";
 
-            if (txtDisplayFormat.Text == "Date") searchby = searchby + "date_time = " + "";
-
-            if (txtDisplayFormat.Text == "Phone") searchby = searchby + "contactNumber = " + "";
-
-            if (txtDisplayFormat.Text == "E-Mail") searchby = searchby + "email = " + "";
-
-            if (txtDisplayFormat.Text == "Job") searchby = searchby + "job = " + "";
 
             searchby = searchby + txtDisplayFormat + "";
 
@@ -65,7 +58,7 @@ namespace JobFinderGuiBeta1
 
         private void txtDisplayFormat_TextChanged(object sender, EventArgs e)
         {
-
+   
           
         
         }

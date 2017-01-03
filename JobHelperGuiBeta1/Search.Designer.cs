@@ -37,9 +37,10 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(78, 39);
+            this.txtSearch.Location = new System.Drawing.Point(58, 32);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(238, 22);
+            this.txtSearch.Size = new System.Drawing.Size(180, 20);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
@@ -47,18 +48,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 44);
+            this.label1.Location = new System.Drawing.Point(9, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
+            this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "C W M I ";
+            this.label1.Text = "Criteria";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(105, 83);
+            this.btnSearch.Location = new System.Drawing.Point(79, 67);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(56, 19);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -66,18 +69,20 @@
             // 
             // txtDisplayFormat
             // 
-            this.txtDisplayFormat.Location = new System.Drawing.Point(106, 11);
+            this.txtDisplayFormat.Location = new System.Drawing.Point(80, 9);
+            this.txtDisplayFormat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDisplayFormat.Name = "txtDisplayFormat";
-            this.txtDisplayFormat.Size = new System.Drawing.Size(183, 22);
+            this.txtDisplayFormat.Size = new System.Drawing.Size(138, 20);
             this.txtDisplayFormat.TabIndex = 3;
             this.txtDisplayFormat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDisplayFormat.TextChanged += new System.EventHandler(this.txtDisplayFormat_TextChanged);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(216, 83);
+            this.btnCancel.Location = new System.Drawing.Point(162, 67);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(56, 19);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -85,16 +90,17 @@
             // 
             // Search
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JobFinderGuiBeta1.Properties.Resources.JobFinder1;
-            this.ClientSize = new System.Drawing.Size(328, 130);
+            this.ClientSize = new System.Drawing.Size(246, 106);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtDisplayFormat);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Search";

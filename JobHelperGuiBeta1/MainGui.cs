@@ -81,6 +81,10 @@ namespace JobFinderGuiBeta1
           
         }
 
+        public void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
