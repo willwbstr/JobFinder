@@ -16,6 +16,7 @@ namespace JobFinderGuiBeta1
     public partial class Results_Modify : Form
     {
         Search searchPage = MainGui.search1;
+        AddBusiness addB  = MainGui.addBusiness;
        
         List<Business> businessList;
         List<Contact> contactList;
@@ -26,29 +27,29 @@ namespace JobFinderGuiBeta1
         {
             InitializeComponent();
 
-    
 
-            this.dataGridView4.ReadOnly = true;
-            this.txtBusinessID.ReadOnly = true;
-            this.txtBusinessName.ReadOnly = true;
-            this.txtAddress.ReadOnly = true;
-            this.txtAddress2.ReadOnly = true;
-            this.txtCity.ReadOnly = true;
-            this.txtState.ReadOnly = true;
-            this.txtZip.ReadOnly = true;
-            this.txtBusinessPhone.ReadOnly = true;
-            this.txtFax.ReadOnly = true;
-            this.txtEmail.ReadOnly = true;
-            this.txtWebsite.ReadOnly = true;
-            this.txtContactFirstName.ReadOnly = true;
-            this.txtContactLastName.ReadOnly = true;
-            this.txtContactNumber.ReadOnly = true;
-            this.txtMethodOfContact.ReadOnly = true;
-            this.txtJob.ReadOnly = true;
-            this.txtSourceOfJob.ReadOnly = true;
-            this.txtSalary.ReadOnly = true;
-            this.txtStatus.ReadOnly = true;
-            this.txtNotes.ReadOnly = true;
+
+            dataGridView4.ReadOnly = true;
+            txtBusinessID.ReadOnly = true;
+            txtBusinessName.ReadOnly = true;
+            txtAddress.ReadOnly = true;
+            txtAddress2.ReadOnly = true;
+            txtCity.ReadOnly = true;
+            txtState.ReadOnly = true;
+            txtZip.ReadOnly = true;
+            txtBusinessPhone.ReadOnly = true;
+            txtFax.ReadOnly = true;
+            txtEmail.ReadOnly = true;
+            txtWebsite.ReadOnly = true;
+            txtContactFirstName.ReadOnly = true;
+            txtContactLastName.ReadOnly = true;
+            txtContactNumber.ReadOnly = true;
+            txtMethodOfContact.ReadOnly = true;
+            txtJob.ReadOnly = true;
+            txtSourceOfJob.ReadOnly = true;
+            txtSalary.ReadOnly = true;
+            txtStatus.ReadOnly = true;
+            txtNotes.ReadOnly = true;
 
         }
       
@@ -56,28 +57,28 @@ namespace JobFinderGuiBeta1
         private void btnModify_Click(object sender, EventArgs e)
         {
             // Takes everything off Read Only mode and allows for changes to be made.
-        
-            this.dataGridView4.ReadOnly = false;
-            this.txtBusinessID.ReadOnly = false;
-            this.txtBusinessName.ReadOnly = false;
-            this.txtAddress.ReadOnly = false;
-            this.txtAddress2.ReadOnly = false;
-            this.txtCity.ReadOnly = false;
-            this.txtState.ReadOnly = false;
-            this.txtZip.ReadOnly = false;
-            this.txtBusinessPhone.ReadOnly = false;
-            this.txtFax.ReadOnly = false;
-            this.txtEmail.ReadOnly = false;
-            this.txtWebsite.ReadOnly = false;
-            this.txtContactFirstName.ReadOnly = false;
-            this.txtContactLastName.ReadOnly = false;
-            this.txtContactNumber.ReadOnly = false;
-            this.txtMethodOfContact.ReadOnly = false;
-            this.txtJob.ReadOnly = false;
-            this.txtSourceOfJob.ReadOnly = false;
-            this.txtSalary.ReadOnly = false;
-            this.txtStatus.ReadOnly = false;
-            this.txtNotes.ReadOnly = false;
+
+            dataGridView4.ReadOnly = false;
+            txtBusinessID.ReadOnly = false;
+            txtBusinessName.ReadOnly = false;
+            txtAddress.ReadOnly = false;
+            txtAddress2.ReadOnly = false;
+            txtCity.ReadOnly = false;
+            txtState.ReadOnly = false;
+            txtZip.ReadOnly = false;
+            txtBusinessPhone.ReadOnly = false;
+            txtFax.ReadOnly = false;
+            txtEmail.ReadOnly = false;
+            txtWebsite.ReadOnly = false;
+            txtContactFirstName.ReadOnly = false;
+            txtContactLastName.ReadOnly = false;
+            txtContactNumber.ReadOnly = false;
+            txtMethodOfContact.ReadOnly = false;
+            txtJob.ReadOnly = false;
+            txtSourceOfJob.ReadOnly = false;
+            txtSalary.ReadOnly = false;
+            txtStatus.ReadOnly = false;
+            txtNotes.ReadOnly = false;
 
         }
 
@@ -85,28 +86,28 @@ namespace JobFinderGuiBeta1
         {
             // Takes everythinfg to read only and saves to the database
 
-         
-            this.dataGridView4.ReadOnly = true;
-            this.txtBusinessID.ReadOnly = true;
-            this.txtBusinessName.ReadOnly = true;
-            this.txtAddress.ReadOnly = true;
-            this.txtAddress2.ReadOnly = true;
-            this.txtCity.ReadOnly = true;
-            this.txtState.ReadOnly = true;
-            this.txtZip.ReadOnly = true;
-            this.txtBusinessPhone.ReadOnly = true;
-            this.txtFax.ReadOnly = true;
-            this.txtEmail.ReadOnly = true;
-            this.txtWebsite.ReadOnly = true;
-            this.txtContactFirstName.ReadOnly = true;
-            this.txtContactLastName.ReadOnly = true;
-            this.txtContactNumber.ReadOnly = true;
-            this.txtMethodOfContact.ReadOnly = true;
-            this.txtJob.ReadOnly = true;
-            this.txtSourceOfJob.ReadOnly = true;
-            this.txtSalary.ReadOnly = true;
-            this.txtStatus.ReadOnly = true;
-            this.txtNotes.ReadOnly = true;
+
+            dataGridView4.ReadOnly = true;
+            txtBusinessID.ReadOnly = true;
+            txtBusinessName.ReadOnly = true;
+            txtAddress.ReadOnly = true;
+            txtAddress2.ReadOnly = true;
+            txtCity.ReadOnly = true;
+            txtState.ReadOnly = true;
+            txtZip.ReadOnly = true;
+            txtBusinessPhone.ReadOnly = true;
+            txtFax.ReadOnly = true;
+            txtEmail.ReadOnly = true;
+            txtWebsite.ReadOnly = true;
+            txtContactFirstName.ReadOnly = true;
+            txtContactLastName.ReadOnly = true;
+            txtContactNumber.ReadOnly = true;
+            txtMethodOfContact.ReadOnly = true;
+            txtJob.ReadOnly = true;
+            txtSourceOfJob.ReadOnly = true;
+            txtSalary.ReadOnly = true;
+            txtStatus.ReadOnly = true;
+            txtNotes.ReadOnly = true;
 
             PhoneDB.UpdatePhone();
             BusinessDB.UpdateBusiness();
@@ -119,8 +120,8 @@ namespace JobFinderGuiBeta1
         {
             // Closes this form, loads the MainGui form, and clears all the old forms 
 
-            
-                 this.Close();
+
+            Close();
                  if (MainGui.mg == null)
                  {
                      MainGui.mg = new MainGui();
@@ -128,7 +129,7 @@ namespace JobFinderGuiBeta1
                  }
                  else
                  {
-                     this.Refresh();
+                Refresh();
                      MainGui.mg.Show();
                  }
             
@@ -199,6 +200,40 @@ namespace JobFinderGuiBeta1
 
         }
 
+        static void AddView(string add)
+        {
+           
+
+            //txtBusinessID.Text = AddBusiness.businessNameTextBox.Text.ToString();
+            //txtBusinessName.Text = .ToString();
+            //txtAddress.Text =.ToString();
+            //txtAddress2.Text = .ToString();
+            //txtCity.Text = .ToString();
+            //txtState.Text = .ToString();
+            //txtZip.Text = ToString();
+            //txtFax.Text = businessList[0].Fax.ToString();
+            //txtEmail.Text = businessList[0].Email.ToString();
+            //txtWebsite.Text = businessList[0].Website.ToString();
+            //txtContactFirstName.Text = contactList[0].ContactFirstName.ToString();
+            //txtContactLastName.Text = contactList[0].ContactLastName.ToString();
+            //txtMethodOfContact.Text = contactList[0].MethodOfContact.ToString();
+            //txtContactEmail.Text = contactList[0].ContactEmail.ToString();
+            //txtContactNumber.Text = phoneList[0].ContactNumber.ToString();
+            //txtJob.Text = jobList[0].JobDescription.ToString();
+            //txtSourceOfJob.Text = jobList[0].SourceOfJob.ToString();
+            //txtSalary.Text = jobList[0].Salary.ToString();
+            //txtStatus.Text = jobList[0].Status.ToString();
+            //txtNotes.Text = jobList[0].Notes.ToString();
+
+        }
+
+        public TextBox BusinessNameTextBox
+        {
+            get
+            {
+                return txtBusinessName;
+            }
+        }
     }
 }
 

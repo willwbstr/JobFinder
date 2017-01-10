@@ -16,7 +16,7 @@ namespace JobFinderData
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
                 "SELECT contactID, contactLastName, contactFirstName, businessID, contactEmail, methodOfContact, notes " +
-                "FROM Contact" + find;
+                "FROM Contact ";
             SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
             try
             {

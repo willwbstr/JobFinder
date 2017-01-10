@@ -35,7 +35,7 @@ namespace JobFinderGuiBeta1
         public Search()
         {
             InitializeComponent();
-            this.txtDisplayFormat.ReadOnly = true;
+            txtDisplayFormat.ReadOnly = true;
         }
 
         private void Search_Load(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace JobFinderGuiBeta1
 
             Results_Modify R_M = new Results_Modify();
             R_M.Show();
-            this.Close();
+            Close();
 
 
         }
@@ -79,7 +79,7 @@ namespace JobFinderGuiBeta1
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             if (MainGui.mg == null)
             {
                 MainGui.mg = new MainGui();
@@ -87,7 +87,7 @@ namespace JobFinderGuiBeta1
             }
             else
             {
-                this.Refresh();
+                Refresh();
                 MainGui.mg.Show();
             }
         }

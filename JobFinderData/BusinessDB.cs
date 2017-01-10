@@ -17,8 +17,12 @@ namespace JobFinderData
             List<Business> businessList = new List<Business>();
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
-                "SELECT businessID, businessName, address, address2, city, state, zip, fax, businessPhone, email, website, notes " +
-                "FROM Business " + find;
+                "SELECT Business.businessID, businessName, address, address2, city, state, zip, fax, businessPhone, email, website, Business.notes, Contact.contactID, contactLastName, contactFirstName, methodOfContact, jobDescription, sourceOfJob, salary, status, contactNumber " +
+                "FROM Business " +
+                "JOIN Contact ON Business.businessID = Contact.businessID " +
+                "JOIN JOB ON Contact.contactID = Job.contactID " +
+                "JOIN Phone ON Job.contactID = Phone.contactID " +
+                find;
             SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
 
             try

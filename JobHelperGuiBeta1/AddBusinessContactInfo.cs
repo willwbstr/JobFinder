@@ -24,7 +24,7 @@ namespace JobFinderGuiBeta1
 
         private void businessBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
+            Validate();
            
         }
 
@@ -39,7 +39,7 @@ namespace JobFinderGuiBeta1
         private void btnPrevious2_Click(object sender, EventArgs e)
         {
             // Hides this form and loads the previous 
-            this.Hide();
+            Hide();
             MainGui.addBusiness.Show();
            
            
@@ -49,7 +49,7 @@ namespace JobFinderGuiBeta1
         {
             addContact = new AddContact();
             // Hides this form and loads the next form
-            this.Hide();
+            Hide();
             if (addContact == null)
             {
                 addContact = new AddContact();

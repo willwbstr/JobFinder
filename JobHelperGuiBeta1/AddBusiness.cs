@@ -24,7 +24,7 @@ namespace JobFinderGuiBeta1
             addBusinessContactInfo = new AddBusinessContactInfo();
             // Hides this form and loads the next form
             //Build the business object;
-            this.Hide();
+            Hide();
             if (addBusinessContactInfo == null)
             {
             addBusinessContactInfo = new AddBusinessContactInfo();
@@ -61,5 +61,10 @@ namespace JobFinderGuiBeta1
         {
 
         }
+        //private Results_Modify otherForm;
+        //private void businessNameTextBox_TextChanged(object sender, EventArgs e)
+        //{
+        //    businessNameTextBox.Text = otherForm.txtBusinessName;
+        //}
     }
 }

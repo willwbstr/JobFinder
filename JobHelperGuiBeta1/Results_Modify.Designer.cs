@@ -596,7 +596,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.TextBox txtBusinessName;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtAddress2;
         private System.Windows.Forms.TextBox txtCity;
@@ -621,5 +620,6 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.TextBox txtNotes;
         public System.Windows.Forms.TextBox txtBusinessID;
+        public System.Windows.Forms.TextBox txtBusinessName;
     }
 }

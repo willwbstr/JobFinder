@@ -23,6 +23,7 @@ namespace JobFinderGuiBeta1
         public static MainGui mg;
         public static string updateStatus;
         public static string find;
+        
        
         public MainGui()
         {
@@ -34,10 +35,10 @@ namespace JobFinderGuiBeta1
           
         }
 
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        public void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Displays the Add Form
-            this.Hide();
+            Hide();
             addBusiness = new AddBusiness();
             addBusiness.Show();
 
@@ -46,8 +47,8 @@ namespace JobFinderGuiBeta1
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Closes program
-       
-            this.Close();
+
+            Close();
             
         }
 
@@ -76,7 +77,7 @@ namespace JobFinderGuiBeta1
 
         public void searchToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            this.Hide();
+            Hide();
             search1 = new Search();
             updateStatus = e.ClickedItem.Text;
             search1.displayFormatText = MainGui.updateStatus;

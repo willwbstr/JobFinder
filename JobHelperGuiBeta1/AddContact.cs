@@ -17,7 +17,7 @@ namespace JobFinderGuiBeta1
         public AddContact()
         {
             InitializeComponent();
-            this.cboMethodOfContact.Items.AddRange(new object[] { "Call", "Text", "Email" });
+            cboMethodOfContact.Items.AddRange(new object[] { "Call", "Text", "Email" });
         }
 
         private void contactBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace JobFinderGuiBeta1
         {
             addJob = new AddJob();
             // Hides this form and loads the next form
-            this.Hide();
+            Hide();
             if (addJob == null)
             {
                 addJob = new AddJob();
@@ -44,7 +44,7 @@ namespace JobFinderGuiBeta1
             }
             else
             {
-                this.Refresh();
+                Refresh();
                 addJob.Show();
             }
           
@@ -53,7 +53,7 @@ namespace JobFinderGuiBeta1
         private void btnPrevious3_Click(object sender, EventArgs e)
         {
             // Hides this form and loads the previous 
-            this.Hide();
+            Hide();
            
             AddBusiness.addBusinessContactInfo.Show();
         }

@@ -36,7 +36,7 @@ namespace JobFinderGuiBeta1
         {
              results_Modify = new Results_Modify();
             // Hides this form and loads the Results_Modify form
-            this.Hide();
+            Hide();
             if (results_Modify == null)
             {
                 results_Modify = new Results_Modify();
@@ -44,7 +44,7 @@ namespace JobFinderGuiBeta1
             }
             else
             {
-                this.Refresh();
+                Refresh();
                 results_Modify.Show();
             }
            
@@ -72,7 +72,7 @@ namespace JobFinderGuiBeta1
         private void btnPrevious4_Click(object sender, EventArgs e)
         {
             // Hides this form and loads the previous 
-            this.Hide();
+            Hide();
             
             AddBusinessContactInfo.addContact.Show();
             
