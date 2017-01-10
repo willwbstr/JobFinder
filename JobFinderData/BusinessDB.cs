@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using JobFinderBU;
 
+
 namespace JobFinderData
 {
     public class BusinessDB
     {
-        public static List<Business> GetAll(string searchby)
+        
+        public static List<Business> GetAll(string find)
         {
             List<Business> businessList = new List<Business>();
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
                 "SELECT businessID, businessName, address, address2, city, state, zip, fax, businessPhone, email, website, notes " +
-                "FROM Business";
-            SqlCommand selectCommand = new SqlCommand(selectStatement + searchby, connection);
+                "FROM Business " + find;
+            SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
 
             try
             {
@@ -52,6 +54,27 @@ namespace JobFinderData
                 connection.Close();
             }
             return businessList;
+        }
+        public static void UpdateBusiness()
+        {
+            SqlConnection connection = JobFinderDB.GetConnection();
+            string updateStatement =
+           "UPDATE Business " + " businessID = BusinessID, businessName = BusinessName, address = Address, address2 = Address2, city = City, state = State, zip = Zip, fax = Fax, businessPhone = BusinessPhone, email = Email, website = Website, notes = Notes " +
+           "Where businessID = BusinessID";
+
+            try
+            {
+                connection.Open();
+                SqlCommand selectCommand = new SqlCommand(updateStatement, connection);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

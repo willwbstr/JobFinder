@@ -11,11 +11,15 @@ using JobFinderData;
 using JobFinderBU;
 
 
+
 namespace JobFinderGuiBeta1
 {
     public partial class Search : Form
-
     {
+        public static Results_Modify R_M;
+
+        
+
         // gets the selected Item from the previous form to display
         public string displayFormatText
         {
@@ -39,15 +43,20 @@ namespace JobFinderGuiBeta1
           
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        public void btnSearch_Click(object sender, EventArgs e)
         {
+
+           
             string searchby = "WHERE ";
-            if (txtDisplayFormat.Text == "Business") searchby = searchby + "businessName = " + "";
+            if (txtDisplayFormat.Text == "Business") searchby = searchby + "businessName = '" + txtSearch.Text + "'";
+          
 
-            if (txtDisplayFormat.Text == "Contact") searchby = searchby + "contactLastName = " + "";
+            if (txtDisplayFormat.Text == "Contact") searchby = searchby + "contactLastName = '" + txtSearch.Text + "'";
 
 
-            searchby = searchby + txtDisplayFormat + "";
+            //searchby = txtSearch + "";
+
+            MainGui.find = searchby;
 
             Results_Modify R_M = new Results_Modify();
             R_M.Show();

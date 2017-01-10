@@ -15,11 +15,14 @@ using System.Windows.Forms;
 
 namespace JobFinderGuiBeta1
 {
+
     public partial class MainGui : Form
     {
+        public static Search search1;
         public static AddBusiness addBusiness;
         public static MainGui mg;
         public static string updateStatus;
+        public static string find;
        
         public MainGui()
         {
@@ -74,7 +77,7 @@ namespace JobFinderGuiBeta1
         public void searchToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             this.Hide();
-            Search search1 = new Search();
+            search1 = new Search();
             updateStatus = e.ClickedItem.Text;
             search1.displayFormatText = MainGui.updateStatus;
             search1.Show();

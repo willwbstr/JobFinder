@@ -10,14 +10,14 @@ namespace JobFinderData
 {
     public static class PhoneDB
     {
-        public static List<Phone> GetAll(string searchby)
+        public static List<Phone> GetAll(string find)
         {
             List<Phone> phoneList = new List<Phone>();
             SqlConnection connection = JobFinderDB.GetConnection();
             string selectStatement =
                 "SELECT phoneID, contactNumber, contactID, notes " +
-                "FROM Phone ";
-            SqlCommand selectCommand = new SqlCommand(selectStatement + searchby, connection);
+                "FROM Phone " + find;
+            SqlCommand selectCommand = new SqlCommand(selectStatement + find, connection);
             try
             {
                 connection.Open();
@@ -46,6 +46,27 @@ namespace JobFinderData
                 connection.Close();
             }
             return phoneList;
+        }
+        public static void UpdatePhone()
+        {
+            SqlConnection connection = JobFinderDB.GetConnection();
+            string updateStatement =
+           "UPDATE Phone " + " SET  phoneID = PhoneID, contactNumber = ContactNumber, contactID = ContactID, notes = Notes "+
+           "Where phoneID = PhoneID";
+
+            try
+            {
+                connection.Open();
+                SqlCommand selectCommand = new SqlCommand(updateStatement, connection);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
 }

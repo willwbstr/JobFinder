@@ -15,6 +15,7 @@ namespace JobFinderGuiBeta1
 {
     public partial class Results_Modify : Form
     {
+        Search searchPage = MainGui.search1;
        
         List<Business> businessList;
         List<Contact> contactList;
@@ -24,10 +25,8 @@ namespace JobFinderGuiBeta1
         public Results_Modify()
         {
             InitializeComponent();
-            //txtMethodOfContact.Text = AddBusinessContactInfo.addContact.cboMethodOfContact.Text.ToString();
 
-
-            // Sets Text Boxes to Read only
+    
 
             this.dataGridView4.ReadOnly = true;
             this.txtBusinessID.ReadOnly = true;
@@ -52,7 +51,7 @@ namespace JobFinderGuiBeta1
             this.txtNotes.ReadOnly = true;
 
         }
-
+      
      
         private void btnModify_Click(object sender, EventArgs e)
         {
@@ -109,7 +108,10 @@ namespace JobFinderGuiBeta1
             this.txtStatus.ReadOnly = true;
             this.txtNotes.ReadOnly = true;
 
-
+            PhoneDB.UpdatePhone();
+            BusinessDB.UpdateBusiness();
+            ContactDB.UpdateContact();
+            JobDB.UpdateJob();
             // TODO: Set all form refs to NULL!!!!!
         }
 
@@ -151,10 +153,28 @@ namespace JobFinderGuiBeta1
 
         private void Results_Modify_Load(object sender, EventArgs e)
         {
-            businessList = BusinessDB.GetAll(" ");
-            contactList = ContactDB.GetAll(" ");
-            jobList = JobDB.GetAll(" ");
-            phoneList = PhoneDB.GetAll(" ");
+
+
+            SearchView(MainGui.find);
+
+
+        }
+
+        private void txtMethodOfContact_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBusinessName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void SearchView(string find)
+        {
+            businessList = BusinessDB.GetAll(find);
+            contactList = ContactDB.GetAll(find);
+            jobList = JobDB.GetAll(find);
+            phoneList = PhoneDB.GetAll(find);
 
             txtBusinessID.Text = businessList[0].BusinessID.ToString();
             txtBusinessName.Text = businessList[0].BusinessName.ToString();
@@ -179,11 +199,6 @@ namespace JobFinderGuiBeta1
 
         }
 
-        private void txtMethodOfContact_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-    
     }
 }
+
